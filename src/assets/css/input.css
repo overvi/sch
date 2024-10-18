@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Roboto", "sens-serif";
+    @apply bg-white text-colors dark:text-[#E0E2E8] dark:bg-black;
+  }
+}
+
+@layer utilities {
+  .question {
+    @apply relative flex cursor-pointer items-center p-4 px-[.7rem];
+  }
+
+  .question::after {
+    @apply absolute right-[.6rem] flex size-[35px] items-center justify-center rounded-full  text-[2.2rem] leading-[0];
+    content: "\002B";
+    transition: 0.2s;
+  }
+
+  .question.active::after {
+    content: "\005f";
+    top: 0;
+  }
+
+  .answercont {
+    transition: 0.3s;
+    @apply max-h-0 overflow-hidden;
+  }
+
+  .answer {
+    @apply pb-5 pr-5 leading-[1.5rem];
+  }
+
+  .select {
+    @apply text-black dark:text-white
+  }
+   .select:has(:checked:disabled) {
+    @apply text-gray-400
+   }
+}
