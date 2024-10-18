@@ -7,7 +7,7 @@ module.exports = {
   entry: "./src/assets/ts/index.ts",
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css", // Output CSS file name
+      filename: "[name].css",
     }),
     new HtmlWebpackPlugin({
       template: "./index.html",
@@ -23,13 +23,16 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/, // Font file extensions
+        type: "asset/resource", // Use built-in asset/resource for Webpack 5
+        generator: {
+          filename: "fonts/[name][ext]", // Output directory for fonts
+        },
+      },
+      {
         test: /\.css$/i,
         include: path.resolve(__dirname, "./src/assets/css"),
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader", // Optional: for PostCSS processing
-        ],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
     ],
   },
@@ -39,11 +42,13 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true, // Clean the output directory before building
   },
+
   optimization: {
     minimizer: [
-      `...`, // Keep the existing JS minimizers (Terser in Webpack 5)
-      new CssMinimizerPlugin(), // Minify CSS
+      `...`, // Keep existing JS minimizers
+      new CssMinimizerPlugin(),
     ],
   },
 };

@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Roboto";
+    src: url(../fonts/roboto/Roboto-Light.woff2) format("woff2");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url(../fonts/roboto/Roboto-Regular.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url(../fonts/roboto/Roboto-Medium.woff2) format("woff2");
+    font-style: normal;
+    font-weight: 500;
+  }
+
   body {
     font-family: "Roboto", "sens-serif";
     @apply bg-white text-colors dark:text-[#E0E2E8] dark:bg-black;
@@ -35,9 +55,9 @@
   }
 
   .select {
-    @apply text-black dark:text-white
+    @apply text-black dark:text-white;
   }
-   .select:has(:checked:disabled) {
-    @apply text-gray-400
-   }
+  .select:has(:checked:disabled) {
+    @apply text-gray-400;
+  }
 }
