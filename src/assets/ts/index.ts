@@ -61,6 +61,7 @@ new Splide(".splide-title", {
 //@ts-ignore
 
 var elms = document.querySelectorAll(".splide-school-image")!;
+const elmPagination = document.querySelectorAll(".school-pagination-checkbox");
 
 for (var i = 0; i < elms.length; i++) {
   //@ts-ignore
@@ -68,9 +69,23 @@ for (var i = 0; i < elms.length; i++) {
     perPage: 1,
     arrows: false,
     width: "30rem",
-    type: "loop",
+
     fixedHeight: "max-content",
   }).mount();
+
+  const checkbox = elmPagination[i].querySelectorAll(
+    ".p-checkbox"
+  ) as NodeListOf<HTMLInputElement>;
+
+  checkbox.forEach((item, index) => {
+    item.addEventListener("change", () => {
+      elm.go(index);
+      checkbox.forEach((c) => {
+        if (c !== item) c.checked = false;
+      });
+    });
+  });
+
   setInterval(() => {
     elm.go(">");
   }, 3000);
@@ -178,8 +193,6 @@ class TextAnimator {
     this.iterateTexts();
   }
 }
-
-let start = false;
 
 function isFooterInView(): boolean {
   const footer = document.querySelector(".booking-animation");
