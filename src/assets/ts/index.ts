@@ -69,7 +69,6 @@ for (var i = 0; i < elms.length; i++) {
     perPage: 1,
     arrows: false,
     width: "30rem",
-
     fixedHeight: "max-content",
   }).mount();
 
@@ -85,10 +84,6 @@ for (var i = 0; i < elms.length; i++) {
       });
     });
   });
-
-  setInterval(() => {
-    elm.go(">");
-  }, 3000);
 }
 
 const nextSplide = document.querySelectorAll(".splide__custom__arrow--next");
