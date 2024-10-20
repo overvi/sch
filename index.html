@@ -21,6 +21,30 @@
   </head>
   <body>
     <div
+      id="scroll-top"
+      class="fixed z-[9999] dark:border bottom-4 cursor-pointer right-6 bg-black p-3 rounded-full text-center flex justify-center items-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="35"
+        height="35"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-labelledby="arrowUpIconTitle"
+        stroke="#fff"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+        color="#fff"
+      >
+        <title id="arrowUpIconTitle">Arrow Up</title>
+        <path d="M18 9l-6-6-6 6" />
+        <path d="M12 21V4" />
+        <path stroke-linecap="round" d="M12 3v1" />
+      </svg>
+    </div>
+    <div
       class="fixed menu hidden z-[999999] inset-0 dark:bg-black bg-white p-7"
     >
       <button class="w-fit block toggle-menu ml-auto">
@@ -994,9 +1018,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1012,9 +1036,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1030,9 +1054,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1245,9 +1269,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1263,9 +1287,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1281,9 +1305,9 @@
                           >
                             <div class="relative">
                               <button
-                                class="bg-[#FBB974] absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
                               >
-                                Book a Call
+                                <p>Book a Call</p>
                               </button>
                               <img
                                 class="w-[500px] mid-lg:w-auto"
@@ -1835,18 +1859,60 @@
               Name Of Website
             </p>
           </div>
-          <div class="flex gap-6">
+          <div class="flex gap-12">
             <ul class="space-y-7">
-              <li>Name Of School</li>
-              <li>Name Of School</li>
-              <li>Name Of School</li>
-              <li>Name Of School</li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">About Us</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Benefits</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Skills</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Process</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Services</a>
+              </li>
             </ul>
             <ul class="space-y-7">
-              <li>Name Of School</li>
-              <li>Name Of School</li>
-              <li>Name Of School</li>
-              <li>Name Of School</li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">About Us</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Benefits</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Skills</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Process</a>
+              </li>
+              <li
+                class="hover:before:w-full before:duration-700 hover:before:left-0 before:right-0 relative before:transition-all before:absolute before:-bottom-1 before:h-[3px] before:w-0 before:bg-[#32628D]"
+              >
+                <a href="">Services</a>
+              </li>
             </ul>
           </div>
         </div>

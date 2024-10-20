@@ -235,3 +235,11 @@ filterCheckbox.forEach((item, index) => {
     });
   });
 });
+
+//
+
+const scrollTop = document.getElementById("scroll-top");
+
+scrollTop?.addEventListener("click", () => {
+  window.scroll({ top: 0, behavior: "smooth" });
+});
