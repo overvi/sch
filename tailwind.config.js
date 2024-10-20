@@ -18,6 +18,8 @@ module.exports = {
         "header-mobile": "url(/src/assets/images/banner-mobile.webp)",
         action: "url(/src/assets/images/call-to-action.webp)",
         schools: "url(/src/assets/images/schools.webp)",
+        "banner-content-image":
+          "url(/src/assets/images/banner-content-image.png)",
       },
       screens: {
         md: "765px",

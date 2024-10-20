@@ -4,10 +4,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
-  entry: "./src/assets/ts/index.ts",
+  entry: {
+    main: "./src/assets/ts/index.ts",
+    darkMode: "./src/assets/ts/darkMode.ts",
+  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "main.css",
     }),
     new HtmlWebpackPlugin({
       template: "./index.html",
@@ -40,7 +43,7 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true, // Clean the output directory before building
   },
@@ -51,4 +54,5 @@ module.exports = {
       new CssMinimizerPlugin(),
     ],
   },
+  mode: "development",
 };

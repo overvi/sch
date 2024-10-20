@@ -25,7 +25,7 @@
 
   body {
     font-family: "Roboto", "sens-serif";
-    @apply bg-white text-colors dark:text-[#E0E2E8] dark:bg-black;
+    @apply bg-white text-colors transition-all duration-500 dark:text-[#E0E2E8] dark:bg-black;
   }
 }
 
@@ -59,5 +59,151 @@
   }
   .select:has(:checked:disabled) {
     @apply text-gray-400;
+  }
+
+  .tab-list {
+    display: none;
+    animation: vanish 0.5s;
+  }
+
+  .toggle-tab:hover svg {
+    @apply rotate-90;
+  }
+  .toggle-tab:has(+ .flex) svg {
+    @apply rotate-90;
+  }
+
+  .nav-booking:hover p {
+    animation: fadeInUp 0.5s ease-in-out both;
+  }
+
+  .nav-booking:not(:hover) p {
+    animation: fadeInDown 0.5s ease-in-out both;
+  }
+
+  .nav-booking-right:hover p {
+    animation: fadeInLeft 0.4s ease-in-out both;
+  }
+
+  .nav-booking-right:not(:hover) p {
+    animation: fadeInRight 0.4s ease-in-out both;
+  }
+
+  #animated-text {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition:
+      opacity 0.9s,
+      transform 0.9s;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes fadeOutUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes vanish {
+    from {
+      display: flex;
+      opacity: 1;
+    }
+    to {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  @keyframes moveTop {
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 300px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      right: 19rem;
+      top: -8rem;
+    }
+
+    50% {
+      right: -3rem;
+      top: 3rem;
+      scale: 0.5;
+    }
+
+    100% {
+      right: 19rem;
+      top: -8rem;
+    }
+  }
+  @keyframes moveLeft {
+    0% {
+      bottom: -13rem;
+      right: -13rem;
+    }
+
+    50% {
+      bottom: -43rem;
+      right: 15rem;
+      scale: 1.5;
+    }
+
+    100% {
+      bottom: -13rem;
+      right: -13rem;
+    }
   }
 }

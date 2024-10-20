@@ -1,0 +1,1 @@
+(()=>{"use strict";var t;(t={}).K=void 0,t.K=()=>{const t="true"===localStorage.getItem("darkMode");document.documentElement.classList.toggle("dark",t)},(0,t.K)()})();
