@@ -5,6 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
+    base: "./src/assets/ts/main.ts",
     main: "./src/assets/ts/index.ts",
     darkMode: "./src/assets/ts/darkMode.ts",
   },
@@ -15,7 +16,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html",
-      chunks: ["main"],
+      chunks: ["base", "main"], // Include both base and main
+    }),
+    new HtmlWebpackPlugin({
+      template: "./booking/index.html",
+      filename: "booking/index.html",
+      chunks: ["base", "darkMode"], // Include both base and darkMode
     }),
   ],
   module: {

@@ -25,7 +25,7 @@
 
   body {
     font-family: "Roboto", "sens-serif";
-    @apply bg-white text-colors transition-all duration-500 dark:text-[#E0E2E8] dark:bg-black;
+    @apply bg-white text-colors  dark:text-[#E0E2E8] dark:bg-black;
   }
 }
 
@@ -60,6 +60,10 @@
   .select:has(:checked:disabled) {
     @apply text-gray-400;
   }
+  .select-booking:has(:checked:disabled) {
+    @apply text-[#C2C7CF] dark:text-[#42474E]
+  }
+
 
   .tab-list {
     display: none;
@@ -191,7 +195,7 @@
   }
   @keyframes moveLeft {
     0% {
-      bottom: -13rem;
+        bottom: -13rem;
       right: -13rem;
     }
 
