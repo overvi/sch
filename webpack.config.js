@@ -8,6 +8,8 @@ module.exports = {
     base: "./src/assets/ts/main.ts",
     main: "./src/assets/ts/index.ts",
     darkMode: "./src/assets/ts/darkMode.ts",
+    filters: "./src/assets/ts/filters.ts",
+    schools: "./src/assets/ts/schools.ts",
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -16,12 +18,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html",
-      chunks: ["base", "main"], // Include both base and main
+      chunks: ["base", "main", "filters"],
     }),
     new HtmlWebpackPlugin({
       template: "./booking/index.html",
       filename: "booking/index.html",
-      chunks: ["base", "darkMode"], // Include both base and darkMode
+      chunks: ["base", "darkMode"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./schools/index.html",
+      filename: "schools/index.html",
+      chunks: ["base", "darkMode", "filters", "schools"],
     }),
   ],
   module: {

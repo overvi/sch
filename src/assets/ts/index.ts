@@ -190,21 +190,3 @@ const handleScroll = () => {
 };
 
 window.addEventListener("scroll", handleScroll);
-
-// Filters
-
-const filterCheckbox = document.querySelectorAll(
-  ".filter-checkbox"
-) as NodeListOf<HTMLInputElement>;
-const filterRemove = document.querySelectorAll(".remove-filter-btn");
-
-filterCheckbox.forEach((item, index) => {
-  item.addEventListener("change", () => {
-    filterRemove[index].classList.toggle("hidden");
-
-    filterRemove[index].addEventListener("click", () => {
-      item.checked = false;
-      filterRemove[index].classList.add("hidden");
-    });
-  });
-});

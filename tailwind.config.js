@@ -11,10 +11,10 @@ module.exports = {
         },
       },
       maxWidth: {
-        container: "78rem",
+        container: "83.5rem",
       },
       backgroundImage: {
-        header: "url(/src/assets/images/banner.webp)",
+        header: "url(/src/assets/images/background.png)",
         "header-mobile": "url(/src/assets/images/banner-mobile.webp)",
         action: "url(/src/assets/images/call-to-action.webp)",
         schools: "url(/src/assets/images/schools.webp)",

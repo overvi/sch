@@ -370,27 +370,26 @@
           brand and it’s catchy
         </h1>
         <div
-          style="
-            background-size: 100% 100%;
-            font-size: clamp(1.1rem, 2vw + 0.5rem, 2rem);
-          "
-          class="bg-header-mobile w-full md:w-auto mx-auto md:h-auto h-[540px] md:bg-header md:mx-4 rounded-[2rem] -z-[1] relative flex mb-8 bg-cover bg-no-repeat md:min-h-[613px]"
+          style="font-size: clamp(1.1rem, 2vw + 0.5rem, 2rem)"
+          class="bg-header-mobile flex md:block h-[540px] overflow-hidden bg-center md:h-[633px] banner w-auto md:bg-header -z-[1] relative bg-no-repeat"
         >
           <div
-            class="absolute p-5 md:p-0 flex gap-5 md:flex-col md:px-2 lg:px-7 items-center dark:text-black md:max-w-[25rem] text-white top-0 bottom-0 md:m-auto h-fit md:space-y-5"
+            class="absolute p-5 z-[500] md:p-0 flex gap-5 md:flex-col md:px-2 lg:px-7 items-center dark:text-black md:max-w-[25rem] text-white top-0 bottom-0 md:m-auto h-fit md:space-y-5"
           >
-            <p class="animate__animated animate__faster animate__fadeInLeft">
-              Lorem ipsum dolor sit <br class="hidden md:block" />
-              amet
-            </p>
             <p
-              class="animate__animated animate__faster animate__fadeInLeft animate__delay-1s"
+              class="header-animated-text animate-none md:animate-[textFade1_5s_ease-in-out_infinite]"
             >
               Lorem ipsum dolor sit <br class="hidden md:block" />
               amet
             </p>
             <p
-              class="animate__animated animate__faster animate__fadeInLeft animate__delay-2s"
+              class="header-animated-text animate-none md:animate-[textFade2_5s_ease-in-out_infinite]"
+            >
+              Lorem ipsum dolor sit <br class="hidden md:block" />
+              amet
+            </p>
+            <p
+              class="header-animated-text animate-none md:animate-[textFade3_5s_ease-in-out_infinite]"
             >
               Lorem ipsum dolor sit <br class="hidden md:block" />
               amet
@@ -403,7 +402,7 @@
             <p>Jackob School</p>
           </div>
           <div
-            class="border overflow-hidden hidden md:block mx-auto mt-auto rounded-3xl border-gray-400"
+            class="border absolute w-fit mx-auto left-0 right-0 bottom-0 overflow-hidden hidden md:block rounded-3xl border-gray-400"
           >
             <button
               style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
@@ -412,9 +411,10 @@
               <p>Book a call</p>
             </button>
           </div>
+          <div class="inner-banner hidden md:block"></div>
         </div>
         <div
-          class="text-white block md:hidden w-fit mx-auto mt-auto rounded-3xl bg-[#32628D]"
+          class="text-white block md:hidden w-fit mx-auto mt-7 rounded-3xl bg-[#32628D]"
         >
           <button
             style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
@@ -1697,7 +1697,7 @@
           <p class="text-[3.562rem]">What makes us different</p>
         </div>
         <ul
-          style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))"
+          style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))"
           class="grid xl:gap-0 gap-7 xl:[&:not(:last-child)]:*:border-r mt-16 border rounded-3xl *:p-3"
         >
           <li class="flex flex-col min-h-[440px] h-full justify-between">
@@ -2209,5 +2209,6 @@
     </footer>
 
     <script src="/dist/main.js"></script>
+    <script src="/dist/filters.js"></script>
   </body>
 </html>

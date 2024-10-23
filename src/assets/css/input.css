@@ -61,9 +61,11 @@
     @apply text-gray-400;
   }
   .select-booking:has(:checked:disabled) {
-    @apply text-[#C2C7CF] dark:text-[#42474E]
+    @apply text-[#C2C7CF] dark:text-[#42474E];
   }
-
+  .select-sort:has(:checked:disabled) {
+    @apply text-[#2C1600] dark:text-[#42474E];
+  }
 
   .tab-list {
     display: none;
@@ -99,6 +101,211 @@
     transition:
       opacity 0.9s,
       transform 0.9s;
+  }
+
+  .schools-header {
+    grid-template-areas:
+      "one one two"
+      "three four four";
+  }
+
+  .schools-header-container {
+    grid-template-areas:
+      "one"
+      "two"
+      "three";
+  }
+
+  .banner {
+    background-size: 100% 100%;
+  }
+
+  .inner-banner {
+    animation: slideAndFade 5s ease-in-out infinite;
+    background-image: url(/src/assets/images/transparent_no_blue_bg.png);
+    height: 613px;
+    background-size: 200% 60%;
+    opacity: 1;
+    background-position: 100% center;
+    background-repeat: no-repeat;
+    transition: opacity 450ms;
+  }
+
+  @media (width > 55em) {
+    .schools-header-container {
+      grid-template-areas:
+        "one two"
+        "three two";
+    }
+  }
+
+  /* First text animation */
+  @keyframes textFade1 {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+
+    30% {
+      transform: translateX(-120%);
+    }
+
+    40% {
+      transform: translateX(-120%);
+    }
+
+    50% {
+      transform: translateX(0);
+    }
+
+    70% {
+      transform: translateX(0);
+    }
+
+    75% {
+      transform: translateX(0);
+    }
+
+    85% {
+      transform: translateX(0);
+    }
+
+    95% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* Second text animation with slightly delayed return */
+  @keyframes textFade2 {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+
+    30% {
+      transform: translateX(-120%);
+    }
+
+    40% {
+      transform: translateX(-120%);
+    }
+    50% {
+      transform: translateX(-120%);
+    }
+
+    60% {
+      transform: translateX(0);
+    }
+
+    75% {
+      transform: translateX(0);
+    }
+
+    80% {
+      transform: translateX(0);
+    }
+
+    90% {
+      transform: translateX(0);
+    }
+
+    95% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes textFade3 {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    30% {
+      transform: translateX(-120%);
+    }
+    40% {
+      transform: translateX(-120%);
+    }
+
+    60% {
+      transform: translateX(-120%);
+    }
+
+    75% {
+      transform: translateX(0);
+    }
+
+    85% {
+      transform: translateX(0);
+    }
+
+    90% {
+      transform: translateX(0);
+    }
+
+    95% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideAndFade {
+    0% {
+      background-position: 0;
+      opacity: 1;
+    }
+    20% {
+      background-position: 0;
+      opacity: 1;
+    }
+    30% {
+      background-position: 100%;
+      opacity: 1;
+    }
+
+    60% {
+      background-position: 100%;
+      opacity: 1;
+    }
+    70% {
+      background-position: 100%;
+      opacity: 1;
+    }
+
+    75% {
+      background-position: 100%;
+      opacity: 0;
+    }
+
+    85% {
+      background-position: 0;
+      opacity: 0;
+    }
+
+    90% {
+      background-position: 0;
+      opacity: 1;
+    }
+
+    100% {
+      background-position: 0;
+      opacity: 1;
+    }
   }
 
   @keyframes fadeInRight {
@@ -195,7 +402,7 @@
   }
   @keyframes moveLeft {
     0% {
-        bottom: -13rem;
+      bottom: -13rem;
       right: -13rem;
     }
 
