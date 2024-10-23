@@ -24,6 +24,7 @@ question.forEach((question) => {
 const splide = new Splide(".splide-schools", {
   perMove: 1,
   perPage: 1,
+
   arrows: false,
 }).mount();
 
