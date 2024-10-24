@@ -124,6 +124,18 @@ function getRandomIndex(length: number) {
   return Math.floor(Math.random() * length);
 }
 
+const changeTranslate = () => {
+  const mediaQuery = window.matchMedia("(max-width: 850px)");
+
+  if (mediaQuery.matches) {
+    translateYValue = 38.39;
+  } else {
+    translateYValue = 85.47;
+  }
+};
+
+let translateYValue = window.innerWidth > 850 ? 85.47 : 38.39;
+
 function scrollList() {
   const list = document.querySelectorAll(
     ".list"
@@ -138,7 +150,7 @@ function scrollList() {
     setInterval(() => {
       const nextIndex = getRandomIndex(itemCount);
 
-      const translateY = nextIndex * 85.47;
+      let translateY = nextIndex * translateYValue;
 
       setTimeout(() => {
         items.forEach((item) => {
@@ -152,3 +164,4 @@ function scrollList() {
 }
 
 scrollList();
+window.addEventListener("resize", changeTranslate);
