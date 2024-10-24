@@ -18,7 +18,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html",
       filename: "index.html",
-      chunks: ["base", "main", "filters"],
+      chunks: ["base", "main", "darkMode", "filters"],
     }),
     new HtmlWebpackPlugin({
       template: "./booking/index.html",
