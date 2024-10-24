@@ -44,7 +44,7 @@
       </svg>
     </div>
     <div
-      class="fixed menu hidden z-[999999] inset-0 dark:bg-black bg-white p-7"
+      class="fixed menu -translate-x-full z-[999999] inset-0 dark:bg-black bg-white p-7"
     >
       <button class="w-fit block toggle-menu ml-auto">
         <svg
@@ -116,10 +116,10 @@
       </div>
     </div>
     <div
-      class="fixed inset-0 login-overlay z-[99999999] hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center"
+      class="fixed flex opacity-0 hidden inset-0 login-overlay z-[99999999] bg-[rgba(0,0,0,.5)] items-center justify-center"
     >
       <div
-        class="bg-white dark:border-gray-400 dark:border dark:bg-black w-[400px] p-5 rounded-3xl"
+        class="bg-white login-content dark:border-gray-400 dark:border dark:bg-black w-[400px] p-5 rounded-3xl"
       >
         <div class="flex justify-between items-center px-5">
           <p class="text-[2rem]">Log In</p>
@@ -145,6 +145,7 @@
                 type="text"
                 class="outline-none dark:bg-black"
                 placeholder="Caroline Farset"
+                autocomplete="username"
               />
             </div>
           </div>
@@ -155,6 +156,7 @@
                 type="password"
                 class="outline-none dark:bg-black"
                 placeholder="*****"
+                autocomplete="new-password"
               />
             </div>
           </div>
@@ -837,7 +839,7 @@
                 <ul class="splide__list">
                   <li class="splide__slide">
                     <div
-                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-6"
+                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-3 mid-lg:p-6"
                     >
                       <div
                         class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
@@ -1127,7 +1129,7 @@
                   </li>
                   <li class="splide__slide">
                     <div
-                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-6"
+                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-3 mid-lg:p-6"
                     >
                       <div
                         class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
@@ -1417,7 +1419,7 @@
                   </li>
                   <li class="splide__slide">
                     <div
-                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-6"
+                      class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-3 mid-lg:p-6"
                     >
                       <div
                         class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
@@ -1878,11 +1880,37 @@
             Do you want to learn?
           </p>
           <div
-            class="flex w-fit m-auto text-center text-[1.6rem] mid-lg:text-[3.562rem] items-center gap-5"
+            class="flex w-fit justify-between m-auto text-center text-[1.6rem] mid-lg:text-[3.562rem] items-center gap-[3rem]"
           >
-            <p id="animated-text-1" class="text-[#FBB974]">UI UX Design</p>
-            <p class="text-center">in</p>
-            <p id="animated-text-2" class="text-[#FBB974]">Jake School</p>
+            <div class="text-[#FBB974] block mid-lg:hidden">
+              <p>Ui Ux Design</p>
+            </div>
+            <ul
+              class="text-list hidden mid-lg:block ease-in-out list *:transition-all *:duration-1000 h-[85.47px] overflow-hidden text-[#FBB974]"
+            >
+              <li>UI UX Design</li>
+              <li>Python</li>
+              <li>Graphic</li>
+              <li>AI learning</li>
+            </ul>
+
+            <div
+              class="flex w-fit m-auto justify-between text-center text-[1.6rem] mid-lg:text-[3.562rem] items-center gap-5"
+            >
+              <p class="text-center">in</p>
+            </div>
+            <ul
+              class="text-list hidden mid-lg:block ease-in-out list *:transition-all *:duration-1000 h-[85.47px] overflow-hidden text-[#FBB974]"
+            >
+              <li>Jack School</li>
+              <li>Jack School</li>
+              <li>Jack School</li>
+              <li>Jack School</li>
+              <li>Jack School</li>
+            </ul>
+            <div class="text-[#FBB974] block mid-lg:hidden">
+              <p>Ui Ux Design</p>
+            </div>
           </div>
           <a
             href="#"
@@ -1933,6 +1961,7 @@
               >
               <input
                 type="text"
+                autocomplete="username"
                 class="outline-none dark:bg-black"
                 placeholder="Caroline Farset"
               />
@@ -1965,6 +1994,7 @@
                 type="text"
                 class="outline-none dark:bg-black"
                 placeholder="Caroline Farset"
+                autocomplete="username"
               />
             </div>
 

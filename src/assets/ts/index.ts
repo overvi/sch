@@ -24,8 +24,17 @@ question.forEach((question) => {
 const splide = new Splide(".splide-schools", {
   perMove: 1,
   perPage: 1,
-
+  mediaQuery: "min",
+  fixedWidth: "70%",
+  width: "100%",
+  gap: "1.5rem",
   arrows: false,
+
+  breakpoints: {
+    850: {
+      fixedWidth: "100%",
+    },
+  },
 }).mount();
 
 // @ts-ignore
@@ -92,69 +101,6 @@ prevSplide.forEach((item) => {
   });
 });
 
-// Change-Text
-
-class TextAnimator {
-  currentIndex: number;
-  options: any;
-
-  constructor(
-    public element: HTMLParagraphElement,
-    public texts: string[],
-    options = {}
-  ) {
-    this.element = element;
-    this.texts = texts;
-    this.currentIndex = 0;
-    this.options = Object.assign(
-      {
-        minIterations: 5,
-        maxIterations: 10,
-        iterationInterval: 300,
-        pauseDuration: 2000,
-        changeTextDuration: 150,
-      },
-      options
-    );
-  }
-
-  changeText(text: string) {
-    this.element.style.opacity = "0";
-    this.element.style.transform = "translateY(-20px)";
-    setTimeout(() => {
-      this.element.textContent = text;
-      this.element.style.opacity = "1";
-      this.element.style.transform = "translateY(0)";
-    }, this.options.changeTextDuration);
-  }
-
-  iterateTexts() {
-    let iterationCount = 0;
-    const targetIterations =
-      Math.floor(
-        Math.random() *
-          (this.options.maxIterations - this.options.minIterations + 1)
-      ) + this.options.minIterations;
-    const finalTextIndex = Math.floor(Math.random() * this.texts.length);
-
-    const iterationInterval = setInterval(() => {
-      this.changeText(this.texts[this.currentIndex]);
-      this.currentIndex = (this.currentIndex + 1) % this.texts.length;
-      iterationCount++;
-
-      if (iterationCount >= targetIterations) {
-        clearInterval(iterationInterval);
-        this.changeText(this.texts[finalTextIndex]);
-        setTimeout(() => this.startAnimation(), this.options.pauseDuration);
-      }
-    }, this.options.iterationInterval);
-  }
-
-  startAnimation() {
-    this.iterateTexts();
-  }
-}
-
 function isFooterInView(): boolean {
   const footer = document.querySelector(".booking-animation");
   if (!footer) return false;
@@ -164,30 +110,45 @@ function isFooterInView(): boolean {
   return rect.y < 70;
 }
 
-const animator1 = new TextAnimator(
-  document.getElementById("animated-text-1") as HTMLParagraphElement,
-  ["Hello", "Welcome", "Changing", "Text", "Animation"],
-  { minIterations: 5, maxIterations: 10 }
-);
-
-const animator2 = new TextAnimator(
-  document.getElementById("animated-text-2") as HTMLParagraphElement,
-  ["Reusable", "Flexible", "Random", "Stop", "Example"],
-  { minIterations: 3, maxIterations: 7 }
-);
-
-const runAnimation = () => {
-  animator2.startAnimation();
-  animator1.startAnimation();
-};
-
 const handleScroll = () => {
   const footerVisible = isFooterInView();
 
   if (footerVisible) {
-    runAnimation();
-    window.removeEventListener("scroll", handleScroll); // use handleScroll here
+    window.removeEventListener("scroll", handleScroll);
   }
 };
 
 window.addEventListener("scroll", handleScroll);
+
+function getRandomIndex(length: number) {
+  return Math.floor(Math.random() * length);
+}
+
+function scrollList() {
+  const list = document.querySelectorAll(
+    ".list"
+  ) as NodeListOf<HTMLUListElement>;
+
+  list.forEach((item) => {
+    const items = item.querySelectorAll("li");
+    const itemCount = items.length;
+
+    let currentIndex = getRandomIndex(itemCount);
+
+    setInterval(() => {
+      const nextIndex = getRandomIndex(itemCount);
+
+      const translateY = nextIndex * 85.47;
+
+      setTimeout(() => {
+        items.forEach((item) => {
+          item.style.transform = `translateY(-${translateY}px)`;
+        });
+      }, 1000);
+
+      currentIndex = nextIndex;
+    }, 2000);
+  });
+}
+
+scrollList();
