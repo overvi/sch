@@ -131,7 +131,8 @@
     transition: opacity 450ms;
   }
 
-  .menu {
+  .menu,
+  .filters-menu {
     transition: transform 1s ease-in-out;
   }
 

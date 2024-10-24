@@ -42,3 +42,22 @@ closeFilters?.addEventListener("click", () => {
     closeFilters.classList.add("hidden");
   });
 });
+
+const menus = document.querySelector(".filters-menu") as HTMLElement;
+
+const toggleFilters = document.querySelectorAll(
+  ".toggle-filters-menu"
+) as NodeListOf<HTMLButtonElement>;
+
+toggleFilters.forEach((item) => {
+  item.addEventListener("click", () => {
+    menus.classList.toggle("-translate-x-full");
+    document.documentElement.classList.toggle("overflow-hidden");
+
+    if (menus.classList.contains("-translate-x-full")) {
+      menus.style.animationName = "fadeInLeftBig";
+    } else {
+      menus.style.animationName = "fadeOutLeftBig";
+    }
+  });
+});

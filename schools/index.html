@@ -38,7 +38,7 @@
       </svg>
     </div>
     <div
-      class="fixed menu hidden z-[999999] inset-0 dark:bg-black bg-white p-7"
+      class="fixed menu -translate-x-full z-[999999] inset-0 dark:bg-black bg-white p-7"
     >
       <button class="w-fit block toggle-menu ml-auto">
         <svg
@@ -110,10 +110,148 @@
       </div>
     </div>
     <div
-      class="fixed inset-0 login-overlay z-[99999999] hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center"
+      class="fixed filters-menu -translate-x-full z-[999999] inset-0 dark:bg-black bg-white p-7"
+    >
+      <button class="w-fit block toggle-filters-menu ml-auto">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          class="fill-black dark:fill-white"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.4498 0.564847C19.3111 0.425792 19.1462 0.315471 18.9648 0.240198C18.7833 0.164926 18.5888 0.126181 18.3923 0.126181C18.1959 0.126181 18.0014 0.164926 17.8199 0.240198C17.6384 0.315471 17.4736 0.425792 17.3348 0.564847L9.99985 7.88485L2.66485 0.549847C2.52597 0.410974 2.36111 0.300814 2.17966 0.225657C1.99822 0.150499 1.80374 0.111816 1.60735 0.111816C1.41095 0.111816 1.21648 0.150499 1.03503 0.225657C0.853586 0.300814 0.68872 0.410974 0.549847 0.549847C0.410974 0.68872 0.300814 0.853586 0.225657 1.03503C0.150499 1.21648 0.111816 1.41095 0.111816 1.60735C0.111816 1.80374 0.150499 1.99822 0.225657 2.17966C0.300814 2.36111 0.410974 2.52597 0.549847 2.66485L7.88485 9.99985L0.549847 17.3348C0.410974 17.4737 0.300814 17.6386 0.225657 17.82C0.150499 18.0015 0.111816 18.1959 0.111816 18.3923C0.111816 18.5887 0.150499 18.7832 0.225657 18.9647C0.300814 19.1461 0.410974 19.311 0.549847 19.4498C0.68872 19.5887 0.853586 19.6989 1.03503 19.774C1.21648 19.8492 1.41095 19.8879 1.60735 19.8879C1.80374 19.8879 1.99822 19.8492 2.17966 19.774C2.36111 19.6989 2.52597 19.5887 2.66485 19.4498L9.99985 12.1148L17.3348 19.4498C17.4737 19.5887 17.6386 19.6989 17.82 19.774C18.0015 19.8492 18.1959 19.8879 18.3923 19.8879C18.5887 19.8879 18.7832 19.8492 18.9647 19.774C19.1461 19.6989 19.311 19.5887 19.4498 19.4498C19.5887 19.311 19.6989 19.1461 19.774 18.9647C19.8492 18.7832 19.8879 18.5887 19.8879 18.3923C19.8879 18.1959 19.8492 18.0015 19.774 17.82C19.6989 17.6386 19.5887 17.4737 19.4498 17.3348L12.1148 9.99985L19.4498 2.66485C20.0198 2.09485 20.0198 1.13485 19.4498 0.564847Z"
+          />
+        </svg>
+      </button>
+
+      <ul class="my-4 space-y-4 pb-3">
+        <li class="w-full rounded-full filter-container">
+          <div
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+          >
+            <div class="flex items-center rounded-full p-2">
+              <div>
+                <svg
+                  class="block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21.0002 21L16.6572 16.657M16.6572 16.657C17.4001 15.9141 17.9894 15.0321 18.3914 14.0615C18.7935 13.0909 19.0004 12.0506 19.0004 11C19.0004 9.94936 18.7935 8.90905 18.3914 7.93842C17.9894 6.96779 17.4001 6.08585 16.6572 5.34296C15.9143 4.60007 15.0324 4.01078 14.0618 3.60874C13.0911 3.20669 12.0508 2.99976 11.0002 2.99976C9.9496 2.99976 8.90929 3.20669 7.93866 3.60874C6.96803 4.01078 6.08609 4.60007 5.34321 5.34296C3.84288 6.84329 3 8.87818 3 11C3 13.1217 3.84288 15.1566 5.34321 16.657C6.84354 18.1573 8.87842 19.0002 11.0002 19.0002C13.122 19.0002 15.1569 18.1573 16.6572 16.657Z"
+                    stroke="#2C1600"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <input
+                class="w-[16.25rem] inpt placeholder:!font-normal placeholder:text-[#2C1600] ml-2 transition-all bg-transparent text-[1.375rem] select-sort select-booking font-light outline-none"
+                name=""
+                placeholder="Search"
+              />
+            </div>
+          </div>
+        </li>
+        <li class="filter-container rounded-full w-full">
+          <div
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+          >
+            <div class="flex items-center rounded-full px-2 py-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  d="M21.5002 21L17.1572 16.657M17.1572 16.657C17.9001 15.9141 18.4894 15.0322 18.8914 14.0616C19.2935 13.0909 19.5004 12.0506 19.5004 11C19.5004 9.94942 19.2935 8.90911 18.8914 7.93848C18.4894 6.96785 17.9001 6.08591 17.1572 5.34302C16.4143 4.60014 15.5324 4.01084 14.5618 3.6088C13.5911 3.20675 12.5508 2.99982 11.5002 2.99982C10.4496 2.99982 9.40929 3.20675 8.43866 3.6088C7.46803 4.01084 6.58609 4.60014 5.84321 5.34302C4.34288 6.84335 3.5 8.87824 3.5 11C3.5 13.1218 4.34288 15.1567 5.84321 16.657C7.34354 18.1574 9.37842 19.0002 11.5002 19.0002C13.622 19.0002 15.6569 18.1574 17.1572 16.657Z"
+                  stroke="#42474E"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <select
+                class="w-full inpt ml-2 font-normal transition-all bg-transparent text-[1.375rem] rounded-full select-sort select-booking outline-none"
+                name=""
+                id="dsere"
+              >
+                <option value="" selected disabled>City</option>
+                <option value="">Ir</option>
+              </select>
+            </div>
+          </div>
+        </li>
+        <li class="filter-container rounded-full w-full">
+          <div
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+          >
+            <div class="flex items-center rounded-full px-2 py-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  d="M22.5 6.10526C22.5 6.3984 22.3829 6.67952 22.1746 6.8868C21.9662 7.09408 21.6836 7.21053 21.3889 7.21053H3.61111C3.31643 7.21053 3.03381 7.09408 2.82544 6.8868C2.61706 6.67952 2.5 6.3984 2.5 6.10526C2.5 5.81213 2.61706 5.531 2.82544 5.32372C3.03381 5.11645 3.31643 5 3.61111 5H21.3889C21.6836 5 21.9662 5.11645 22.1746 5.32372C22.3829 5.531 22.5 5.81213 22.5 6.10526ZM19.537 12C19.537 12.2931 19.42 12.5743 19.2116 12.7815C19.0032 12.9888 18.7206 13.1053 18.4259 13.1053H6.57407C6.27939 13.1053 5.99677 12.9888 5.7884 12.7815C5.58003 12.5743 5.46296 12.2931 5.46296 12C5.46296 11.7069 5.58003 11.4257 5.7884 11.2185C5.99677 11.0112 6.27939 10.8947 6.57407 10.8947H18.4259C18.7206 10.8947 19.0032 11.0112 19.2116 11.2185C19.42 11.4257 19.537 11.7069 19.537 12ZM16.5741 17.8947C16.5741 18.1879 16.457 18.469 16.2486 18.6763C16.0403 18.8836 15.7576 19 15.463 19H9.53704C9.24235 19 8.95974 18.8836 8.75136 18.6763C8.54299 18.469 8.42593 18.1879 8.42593 17.8947C8.42593 17.6016 8.54299 17.3205 8.75136 17.1132C8.95974 16.9059 9.24235 16.7895 9.53704 16.7895H15.463C15.7576 16.7895 16.0403 16.9059 16.2486 17.1132C16.457 17.3205 16.5741 17.6016 16.5741 17.8947Z"
+                  fill="#42474E"
+                />
+              </svg>
+              <select
+                class="w-full inpt ml-2 font-normal transition-all bg-transparent text-[1.375rem] rounded-full select-sort select-booking outline-none"
+                name=""
+                id="dsere"
+              >
+                <option value="" selected disabled>Sort By</option>
+                <option value="">Ir</option>
+              </select>
+            </div>
+          </div>
+        </li>
+        <li class="filter-container rounded-full w-full">
+          <div
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+          >
+            <div class="flex items-center rounded-full px-2 py-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="24"
+                viewBox="0 0 25 24"
+                fill="none"
+              >
+                <path
+                  d="M9 10.5H5.5C4.95 10.5 4.47933 10.3043 4.088 9.913C3.69667 9.52167 3.50067 9.05067 3.5 8.5V5C3.5 4.45 3.696 3.97933 4.088 3.588C4.48 3.19667 4.95067 3.00067 5.5 3H9C9.55 3 10.021 3.196 10.413 3.588C10.805 3.98 11.0007 4.45067 11 5V8.5C11 9.05 10.8043 9.521 10.413 9.913C10.0217 10.305 9.55067 10.5007 9 10.5ZM5.5 8.5H9V5H5.5V8.5ZM9 21H5.5C4.95 21 4.47933 20.8043 4.088 20.413C3.69667 20.0217 3.50067 19.5507 3.5 19V15.5C3.5 14.95 3.696 14.4793 4.088 14.088C4.48 13.6967 4.95067 13.5007 5.5 13.5H9C9.55 13.5 10.021 13.696 10.413 14.088C10.805 14.48 11.0007 14.9507 11 15.5V19C11 19.55 10.8043 20.021 10.413 20.413C10.0217 20.805 9.55067 21.0007 9 21ZM5.5 19H9V15.5H5.5V19ZM19.5 10.5H16C15.45 10.5 14.9793 10.3043 14.588 9.913C14.1967 9.52167 14.0007 9.05067 14 8.5V5C14 4.45 14.196 3.97933 14.588 3.588C14.98 3.19667 15.4507 3.00067 16 3H19.5C20.05 3 20.521 3.196 20.913 3.588C21.305 3.98 21.5007 4.45067 21.5 5V8.5C21.5 9.05 21.3043 9.521 20.913 9.913C20.5217 10.305 20.0507 10.5007 19.5 10.5ZM16 8.5H19.5V5H16V8.5ZM19.5 21H16C15.45 21 14.9793 20.8043 14.588 20.413C14.1967 20.0217 14.0007 19.5507 14 19V15.5C14 14.95 14.196 14.4793 14.588 14.088C14.98 13.6967 15.4507 13.5007 16 13.5H19.5C20.05 13.5 20.521 13.696 20.913 14.088C21.305 14.48 21.5007 14.9507 21.5 15.5V19C21.5 19.55 21.3043 20.021 20.913 20.413C20.5217 20.805 20.0507 21.0007 19.5 21ZM16 19H19.5V15.5H16V19Z"
+                  fill="black"
+                />
+              </svg>
+              <select
+                class="w-full inpt ml-2 font-normal transition-all bg-transparent text-[1.375rem] rounded-full select-sort select-booking outline-none"
+                name=""
+                id="dsere"
+              >
+                <option value="" selected disabled>View</option>
+                <option value="">Ir</option>
+              </select>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="fixed flex opacity-0 hidden inset-0 login-overlay z-[99999999] bg-[rgba(0,0,0,.5)] items-center justify-center"
     >
       <div
-        class="bg-white dark:bg-black dark:border-gray-400 dark:border w-[400px] p-5 rounded-3xl"
+        class="bg-white login-content dark:border-gray-400 dark:border dark:bg-black w-[400px] p-5 rounded-3xl"
       >
         <div class="flex justify-between items-center px-5">
           <p class="text-[2rem]">Log In</p>
@@ -139,6 +277,7 @@
                 type="text"
                 class="outline-none dark:bg-black"
                 placeholder="Caroline Farset"
+                autocomplete="username"
               />
             </div>
           </div>
@@ -149,6 +288,7 @@
                 type="password"
                 class="outline-none dark:bg-black"
                 placeholder="*****"
+                autocomplete="new-password"
               />
             </div>
           </div>
@@ -360,7 +500,8 @@
         <div class="space-y-4 ml-[2rem]" style="grid-area: one">
           <h1 class="text-[3.562rem]">School’s list</h1>
           <p class="text-[1.75rem]">
-            Vary list of schools, for lighten up <br />
+            Vary list of schools, for lighten up
+            <br class="hidden mid-lg:block" />
             your way
           </p>
           <button
@@ -466,12 +607,16 @@
           </div>
         </div>
       </div>
+    </header>
+    <main class="*:px-4 mt-6 max-w-container m-auto">
       <div class="max-w-container m-auto border-b pb-4">
         <div
           class="flex items-center text-[1.375rem] justify-between mt-[5.25rem]"
         >
           <p>Schools</p>
-          <button class="flex min-[580px]:hidden items-center gap-3">
+          <button
+            class="flex toggle-filters-menu min-[580px]:hidden items-center gap-3"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -664,16 +809,18 @@
           </ul>
         </div>
       </div>
-      <div class="max-w-container m-auto flex items-center gap-6 mt-5">
+      <div
+        class="max-w-container items-start m-auto flex-col mid-lg:flex-row flex items- gap-6 mt-5"
+      >
         <button
           class="border-[#42474E] close-all-filters border-2 p-[.625rem_1rem] rounded-full"
         >
           Close All Filters
         </button>
         <ul
-          class="flex gap-4 min-[840px]:!px-3 min-[840px]:!flex min-[840px]:gap-5 min-[840px]:justify-center bg-white dark:bg-black px-3 *:rounded-full *:font-medium *:text-gray-400 *:border *:border-[#C2C7CF] *:text-center items-center"
+          class="flex flex-col mid-lg:flex-row gap-4 min-[840px]:!px-3 min-[840px]:!flex min-[840px]:gap-5 min-[840px]:justify-center bg-white dark:bg-black *:rounded-full *:font-medium *:text-gray-400 *:border *:border-[#C2C7CF] *:text-center items-center"
         >
-          <li class="splide__slide relative *:p-2 *:px-3 overflow-hidden">
+          <li class="relative *:p-2 *:px-3 overflow-hidden">
             <input
               checked
               type="checkbox"
@@ -701,7 +848,7 @@
               </button>
             </label>
           </li>
-          <li class="splide__slide relative *:p-2 *:px-3 overflow-hidden">
+          <li class="relative *:p-2 *:px-3 overflow-hidden">
             <input
               checked
               type="checkbox"
@@ -731,12 +878,7 @@
           </li>
         </ul>
       </div>
-    </header>
-    <!-- <main class="*:px-4 mt-36 max-w-container m-auto">
-      <div>
-
-      </div>
-    </main> -->
+    </main>
     <footer class="mt-10 m-auto">
       <div class="mx-4">
         <div
@@ -1063,8 +1205,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      const input = document.querySelectorAll(".inpt");
+      const filterContainer = document.querySelectorAll(".filter-container");
+
+      input.forEach((inp, index) => {
+        inp.addEventListener("click", () => {
+          console.log("d");
+          filterContainer[index].classList.toggle("bg-[#FFDCBD]");
+        });
+      });
+    </script>
     <script src="/dist/base.js"></script>
-    <script src="/dist/filters.js"></script>
+    <script defer src="/dist/filters.js"></script>
     <script src="/dist/schools.js"></script>
   </body>
 </html>

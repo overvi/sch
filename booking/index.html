@@ -38,7 +38,7 @@
       </svg>
     </div>
     <div
-      class="fixed menu hidden z-[999999] inset-0 dark:bg-black bg-white p-7"
+      class="fixed menu -translate-x-full z-[999999] inset-0 dark:bg-black bg-white p-7"
     >
       <button class="w-fit block toggle-menu ml-auto">
         <svg
@@ -110,10 +110,10 @@
       </div>
     </div>
     <div
-      class="fixed inset-0 login-overlay z-[99999999] hidden bg-[rgba(0,0,0,.5)] flex items-center justify-center"
+      class="fixed flex opacity-0 hidden inset-0 login-overlay z-[99999999] bg-[rgba(0,0,0,.5)] items-center justify-center"
     >
       <div
-        class="bg-white dark:bg-black dark:border-gray-400 dark:border w-[400px] p-5 rounded-3xl"
+        class="bg-white login-content dark:border-gray-400 dark:border dark:bg-black w-[400px] p-5 rounded-3xl"
       >
         <div class="flex justify-between items-center px-5">
           <p class="text-[2rem]">Log In</p>
@@ -139,6 +139,7 @@
                 type="text"
                 class="outline-none dark:bg-black"
                 placeholder="Caroline Farset"
+                autocomplete="username"
               />
             </div>
           </div>
@@ -149,6 +150,7 @@
                 type="password"
                 class="outline-none dark:bg-black"
                 placeholder="*****"
+                autocomplete="new-password"
               />
             </div>
           </div>
@@ -370,7 +372,7 @@
         <form action="">
           <div
             style="grid-template-columns: repeat(auto-fit, minmax(392px, 1fr))"
-            class="block sm:grid gap-6 space-y-[1.5rem] sm:space-y-0"
+            class="block items-end sm:grid gap-6 space-y-[1.5rem] sm:space-y-0"
           >
             <div>
               <div
