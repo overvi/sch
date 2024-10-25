@@ -1,4 +1,4 @@
-const animate = (elm: HTMLElement, names: string[], duraion: string) => {
+export const animate = (elm: HTMLElement, names: string[], duraion: string) => {
   if (!elm.classList.contains("hidden")) {
     elm.style.animationName = names[0];
     elm.style.animationDuration = duraion;

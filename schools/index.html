@@ -10,6 +10,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css"
+    />
     <script src="/dist/darkMode.js"></script>
   </head>
   <body>
@@ -129,7 +134,7 @@
       <ul class="my-4 space-y-4 pb-3">
         <li class="w-full rounded-full filter-container">
           <div
-            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700"
           >
             <div class="flex items-center rounded-full p-2">
               <div>
@@ -160,7 +165,7 @@
         </li>
         <li class="filter-container rounded-full w-full">
           <div
-            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700"
           >
             <div class="flex items-center rounded-full px-2 py-2.5">
               <svg
@@ -191,7 +196,7 @@
         </li>
         <li class="filter-container rounded-full w-full">
           <div
-            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700"
           >
             <div class="flex items-center rounded-full px-2 py-2.5">
               <svg
@@ -219,7 +224,7 @@
         </li>
         <li class="filter-container rounded-full w-full">
           <div
-            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+            class="overflow-hidden peer-[.hidden]:w-[16rem] transition-all duration-700"
           >
             <div class="flex items-center rounded-full px-2 py-2.5">
               <svg
@@ -235,12 +240,13 @@
                 />
               </svg>
               <select
-                class="w-full inpt ml-2 font-normal transition-all bg-transparent text-[1.375rem] rounded-full select-sort select-booking outline-none"
+                class="w-full view-input inpt ml-2 font-normal transition-all bg-transparent text-[1.375rem] rounded-full select-sort select-booking outline-none"
                 name=""
                 id="dsere"
               >
                 <option value="" selected disabled>View</option>
-                <option value="">Ir</option>
+                <option value="image">Image View</option>
+                <option value="card">Card View</option>
               </select>
             </div>
           </div>
@@ -635,13 +641,13 @@
             <p>Filter</p>
           </button>
           <ul
-            class="hidden min-[580px]:flex items-center gap-8 *:cursor-pointer"
+            class="hidden min-[600px]:flex items-center gap-8 *:cursor-pointer"
           >
             <li
               class="flex hover:text-amber-900 duration-700 transition-all items-center gap-2"
             >
               <button
-                class="peer sort-button gap-2 flex items-center"
+                class="peer transition-all duration-700 sort-button gap-2 flex items-center"
                 tabindex="0"
               >
                 <svg
@@ -669,7 +675,7 @@
                 <p>City</p>
               </button>
               <div
-                class="overflow-hidden w-0 peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+                class="overflow-hidden w-0 peer-[.opacity-0]:w-[16rem] transition-all duration-700 sort-content"
               >
                 <div class="bg-[#FFDCBD] flex items-center rounded-full p-2">
                   <svg
@@ -708,7 +714,9 @@
             <li
               class="flex items-center hover:text-amber-900 duration-700 transition-all gap-2"
             >
-              <div class="peer sort-button gap-2 flex items-center">
+              <div
+                class="peer transition-all duration-700 sort-button gap-2 flex items-center"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
@@ -727,7 +735,7 @@
                 <p>Search</p>
               </div>
               <div
-                class="overflow-hidden w-0 peer-[.hidden]:w-[16rem] transition-all duration-700 sort-content"
+                class="overflow-hidden w-0 peer-[.opacity-0]:w-[16rem] transition-all duration-700 sort-content"
               >
                 <div class="bg-[#FFDCBD] flex items-center rounded-full p-2">
                   <div>
@@ -810,7 +818,7 @@
         </div>
       </div>
       <div
-        class="max-w-container items-start m-auto flex-col mid-lg:flex-row flex items- gap-6 mt-5"
+        class="max-w-container items-start mid-lg:items-center m-auto flex-col sm:flex-row flex gap-6 mt-5"
       >
         <button
           class="border-[#42474E] close-all-filters border-2 p-[.625rem_1rem] rounded-full"
@@ -818,7 +826,7 @@
           Close All Filters
         </button>
         <ul
-          class="flex flex-col mid-lg:flex-row gap-4 min-[840px]:!px-3 min-[840px]:!flex min-[840px]:gap-5 min-[840px]:justify-center bg-white dark:bg-black *:rounded-full *:font-medium *:text-gray-400 *:border *:border-[#C2C7CF] *:text-center items-center"
+          class="flex flex-col sm:flex-row gap-4 min-[840px]:!px-3 min-[840px]:!flex min-[840px]:gap-5 min-[840px]:justify-center bg-white dark:bg-black *:rounded-full *:font-medium *:text-gray-400 *:border *:border-[#C2C7CF] *:text-center items-center"
         >
           <li class="relative *:p-2 *:px-3 overflow-hidden">
             <input
@@ -878,6 +886,454 @@
           </li>
         </ul>
       </div>
+      <section class="group/view schools-container image">
+        <div class="card-wrapper group-[.card]/view:max-w-[70rem] m-auto">
+          <div
+            class="bg-[#FFDCBD] group-[.card]/view:flex-col flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-[2rem] group-[.card]/view:p-0 p-3 mid-lg:p-6"
+          >
+            <div
+              class="flex order-1 group-[.card]/view:order-1 mid-lg:-order-1 flex-col basis-[50%] group-[.card]/view:p-3 justify-between p-1 mid-lg:p-5"
+            >
+              <div>
+                <p class="text-[2rem] mb-5">School’ss name</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet Borem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                  libero et velit interdum, ac aliquetBorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Nunc vulputate libero et
+                  velit interdum, ac aliquet
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex items-center text-[1.4rem] mt-8 gap-5 w-full justify-between"
+                >
+                  <button
+                    class="bg-white text-nowrap dark:bg-black rounded-full p-2 px-4"
+                  >
+                    View School
+                  </button>
+                  <button
+                    class="bg-[#fbb974] overflow-hidden nav-booking group-[.card]/view:block block mid-lg:hidden text-nowrap rounded-full p-2 px-4"
+                  >
+                    <p>Book a Call</p>
+                  </button>
+                </div>
+                <div>
+                  <div
+                    class="mt-9 group-[.card]/view:hidden hidden lg:block overflow-hidden font-medium"
+                  >
+                    <ul
+                      class="flex school-pagination-checkbox relative text-[0.875rem] items-end"
+                    >
+                      <li
+                        class="relative overflow-hidden group text-center border border-black rounded-l-xl border-r-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="border-black relative overflow-hidden text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                      <li
+                        class="border-black overflow-hidden relative text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                      <li
+                        class="border-black relative overflow-hidden text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="relative overflow-hidden text-center group border-black border rounded-r-xl border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="splide splide-school-image m-auto mid-lg:max-w-[50%] lg:max-w-[30rem] max-w-full group-[.card]/view:max-w-full"
+              role="group"
+              aria-label="Splide Basic HTML Example"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-[#FFDCBD] group-[.card]/view:flex-col flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-[2rem] group-[.card]/view:p-1 p-3 mid-lg:p-6"
+          >
+            <div
+              class="flex order-1 group-[.card]/view:order-1 mid-lg:-order-1 flex-col basis-[50%] group-[.card]/view:p-3 justify-between p-1 mid-lg:p-5"
+            >
+              <div>
+                <p class="text-[2rem] mb-5">School’ss name</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet Borem ipsum
+                  dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+                  libero et velit interdum, ac aliquetBorem ipsum dolor sit
+                  amet, consectetur adipiscing elit. Nunc vulputate libero et
+                  velit interdum, ac aliquet
+                </p>
+              </div>
+              <div>
+                <div
+                  class="flex text-[1.4rem] items-center mt-8 gap-5 w-full justify-between"
+                >
+                  <button
+                    class="bg-white text-nowrap dark:bg-black rounded-full p-2 px-4"
+                  >
+                    View School
+                  </button>
+                  <button
+                    class="bg-[#fbb974] overflow-hidden nav-booking group-[.card]/view:block block mid-lg:hidden text-nowrap rounded-full p-2 px-4"
+                  >
+                    <p>Book a Call</p>
+                  </button>
+                </div>
+                <div>
+                  <div
+                    class="mt-9 group-[.card]/view:hidden hidden lg:block overflow-hidden font-medium"
+                  >
+                    <ul
+                      class="flex school-pagination-checkbox relative text-[0.875rem] items-end"
+                    >
+                      <li
+                        class="relative overflow-hidden group text-center border border-black rounded-l-xl border-r-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="border-black relative overflow-hidden text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                      <li
+                        class="border-black overflow-hidden relative text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                      <li
+                        class="border-black relative overflow-hidden text-center group border border-r-0 border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+
+                      <li
+                        class="relative overflow-hidden text-center group border-black border rounded-r-xl border-l-0"
+                      >
+                        <input
+                          class="absolute p-checkbox peer opacity-0 inset-0"
+                          type="checkbox"
+                        />
+                        <div class="peer-checked:bg-[#FBB974] p-2.5">
+                          <p>Groups Label</p>
+                          <p class="hidden group-hover:block">4 Courses</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="splide mid-lg:max-w-[50%] lg:max-w-[30rem] max-w-full group-[.card]/view:max-w-full splide-school-image m-auto"
+              role="group"
+              aria-label="Splide Basic HTML Example"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide p-3">
+                    <div class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]">
+                      <div class="relative">
+                        <button
+                          class="bg-[#FBB974] group-[.card]/view:hidden overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                        >
+                          <p>Book a Call</p>
+                        </button>
+                        <img
+                          class="w-[500px] group-[.card]/view:hidden mid-lg:w-auto"
+                          src="/src/assets/images/schools.webp"
+                          alt=""
+                        />
+                        <img
+                          class="w-[500px] hidden group-[.card]/view:block mid-lg:w-auto"
+                          src="/src/assets/images/card-small.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="mt-10 m-auto">
       <div class="mx-4">
@@ -1205,19 +1661,9 @@
         </div>
       </div>
     </footer>
-    <script>
-      const input = document.querySelectorAll(".inpt");
-      const filterContainer = document.querySelectorAll(".filter-container");
 
-      input.forEach((inp, index) => {
-        inp.addEventListener("click", () => {
-          console.log("d");
-          filterContainer[index].classList.toggle("bg-[#FFDCBD]");
-        });
-      });
-    </script>
     <script src="/dist/base.js"></script>
-    <script defer src="/dist/filters.js"></script>
+    <script src="/dist/filters.js"></script>
     <script src="/dist/schools.js"></script>
   </body>
 </html>
