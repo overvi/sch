@@ -120,15 +120,93 @@
     background-size: 100% 100%;
   }
 
+  .banner-image {
+    opacity: 1;
+    transition: opacity 450ms;
+  }
+
+
   .inner-banner {
     animation: slideAndFade 5s ease-in-out infinite;
-    background-image: url(/src/assets/images/transparent_no_blue_bg.webp);
-    height: 613px;
-    background-size: 200% 60%;
-    opacity: 1;
-    background-position: 100% center;
-    background-repeat: no-repeat;
-    transition: opacity 450ms;
+  }
+
+  .outer-banner {
+    animation: outerSlideFade 5s ease-in-out infinite;
+    right: 0;
+  } 
+
+  @keyframes outerSlideFade {
+0% {
+  transform: translateX(100%);
+  opacity: 1;
+}
+20% {
+  transform: translateX(100%);
+  opacity: 1;
+}
+
+30% {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+75% {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+100% {
+  transform: translateX(0);
+opacity: 0;
+}
+  }
+
+  @keyframes slideAndFade {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+      
+    }
+    20% {
+      transform: translateX(0);
+
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200%);
+      opacity: 1;
+
+    }
+
+    60% {
+      transform: translateX(-200%);
+      opacity: 1;
+    }
+    70% {
+      transform: translateX(-200%);
+      opacity: 1;
+    }
+
+    75% {
+      transform: translateX(-200%);
+      opacity: 0;
+    }
+
+    85% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+
+    90% {
+      transform: translateX(0);
+
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 
   .menu,
@@ -292,49 +370,7 @@
       transform: translateX(0);
     }
   }
-  @keyframes slideAndFade {
-    0% {
-      background-position: 0;
-      opacity: 1;
-    }
-    20% {
-      background-position: 0;
-      opacity: 1;
-    }
-    30% {
-      background-position: 100%;
-      opacity: 1;
-    }
-
-    60% {
-      background-position: 100%;
-      opacity: 1;
-    }
-    70% {
-      background-position: 100%;
-      opacity: 1;
-    }
-
-    75% {
-      background-position: 100%;
-      opacity: 0;
-    }
-
-    85% {
-      background-position: 0;
-      opacity: 0;
-    }
-
-    90% {
-      background-position: 0;
-      opacity: 1;
-    }
-
-    100% {
-      background-position: 0;
-      opacity: 1;
-    }
-  }
+  
 
   @keyframes fadeInRight {
     from {
