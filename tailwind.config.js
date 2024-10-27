@@ -12,6 +12,7 @@ module.exports = {
       },
       maxWidth: {
         container: "83.5rem",
+        "container-tight": "78rem",
       },
       backgroundImage: {
         header: "url(/src/assets/images/background.png)",

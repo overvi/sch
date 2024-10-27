@@ -8,7 +8,7 @@ for (var i = 0; i < elms.length; i++) {
   const elm = new Splide(elms[i], {
     perPage: 1,
     arrows: false,
-
+    width: "30rem",
     fixedHeight: "max-content",
   }).mount();
 

@@ -46,16 +46,17 @@ toggleLogin.forEach((item) => {
 });
 
 window.addEventListener("click", (event) => {
-  if (loginOverlay?.classList.contains("hidden")) return;
-  if (
-    !(event.target as HTMLElement).closest(".toggle-login  , .login-content")
-  ) {
-    loginOverlay.classList.toggle("opacity-0");
-    loginOverlay.classList.toggle("hidden");
-    animate(loginOverlay, ["show", "vanish"], "1s");
+
+  if (loginOverlay && !loginOverlay.classList.contains("hidden")) {
+    if (
+      !(event.target as HTMLElement).closest(".toggle-login, .login-content")
+    ) {
+      loginOverlay.classList.add("opacity-0");
+      loginOverlay.classList.add("hidden");
+      animate(loginOverlay, ["show", "vanish"], "1s");
+    }
   }
 });
-
 const scrollTop = document.getElementById("scroll-top");
 
 scrollTop?.addEventListener("click", () => {
