@@ -233,13 +233,21 @@
   }
 
   .pre-footer-bg {
-    @apply  pt-[57.5%] md:h-0  md:pt-[45.42%] bg-[url(/src/assets/images/Subtract2.png)] md:bg-[url(/src/assets/images/Subtract.webp)];
+    @apply pt-[57.5%] md:h-0  md:pt-[45.42%] bg-[url(/src/assets/images/Subtract2.png)] md:bg-[url(/src/assets/images/Subtract.webp)];
 
     background-size: 100% 100%;
     background-repeat: no-repeat;
+  }
 
+  .about-banner {
+    grid-template-areas:
+      "one"
+      "two"
+      "three";
+  }
 
-    
+  .about-banner > *:not(:nth-child(2)) {
+    box-shadow: 3px 6px 18px 0px rgba(0, 0, 0, 0.16);
   }
 
   @media (width > 55em) {
@@ -247,6 +255,13 @@
       grid-template-areas:
         "one two"
         "three two";
+    }
+    .about-banner {
+      grid-auto-columns: 49%;
+      justify-items: center;
+      grid-template-areas:
+        "one two"
+        "one three";
     }
   }
 

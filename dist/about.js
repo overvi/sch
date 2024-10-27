@@ -1,0 +1,1 @@
+(()=>{"use strict";new Splide(".splide",{mediaQuery:"min",perPage:"1",fixedWidth:"66%",gap:"1rem",arrows:!1,breakpoints:{650:{perPage:"3",fixedWidth:"35%"},850:{perPage:"4",fixedWidth:"22%"}}}).mount()})();

@@ -1,4 +1,3 @@
-
 let question = document.querySelectorAll(".question");
 
 question.forEach((question) => {
