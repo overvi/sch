@@ -12,6 +12,7 @@ module.exports = {
     schools: "./src/assets/ts/schools.ts",
     schoolDetails: "./src/assets/ts/schoolDetails.ts",
     about: "./src/assets/ts/about.ts",
+    profile: "./src/assets/ts/profile.ts",
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -41,6 +42,11 @@ module.exports = {
       template: "./about/index.html",
       filename: "about/index.html",
       chunks: ["base", "darkMode", "about"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./profile/index.html",
+      filename: "profile/index.html",
+      chunks: ["base", "darkMode", "profile"],
     }),
   ],
   module: {
