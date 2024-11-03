@@ -18,5 +18,8 @@
   "scripts": {
     "watch": "npx webpack watch",
     "build": "npx webpack --mode=production "
+  },
+  "dependencies": {
+    "memcached": "^2.2.2"
   }
 }
