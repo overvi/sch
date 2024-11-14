@@ -15,7 +15,6 @@ module.exports = {
         "container-tight": "78rem",
       },
       backgroundImage: {
-        "header-mobile": "url(/src/assets/images/banner-mobile.webp)",
         action: "url(/src/assets/images/call-to-action.webp)",
         schools: "url(/src/assets/images/schools.webp)",
         "banner-content-image":
