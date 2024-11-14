@@ -145,6 +145,47 @@
     @apply bg-[#AAF2CB] dark:text-[#AAF2CB] dark:bg-[#005236];
   }
 
+  .intro-wrapper {
+    animation: intro .5s ease-in-out 1 forwards;
+    animation-delay: 2.5s;
+  }
+
+  .intro-text::after {
+    content: "Hello";
+    animation-name: animate;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes intro {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Hello";
+    }
+    25% {
+        content: "Bonjour";
+    }
+    50% {
+        content: "Hola";
+    }
+    75% {
+        content: "Ciao";
+    }
+    100% {
+        content: "こんにちは";
+    }
+}
+
   @keyframes outerSlideFade {
     0% {
       transform: translateX(100%);
