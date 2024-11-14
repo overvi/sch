@@ -314,6 +314,12 @@
     }
   }
 
+  @media (width > 46.765rem) {
+    .banner {
+      background-image: none;
+    }
+  }
+
   @media (width > 55em) {
     .schools-header-container {
       grid-template-areas:
