@@ -8,13 +8,12 @@ let hiddenElements = 0;
 
 filterCheckbox.forEach((item, index) => {
   const toggleChecked = () => {
-    filterRemove[index].classList.remove("hidden");
-
-    filterRemove[index].addEventListener("click", () => {
-      item.checked = false;
+    if (item.checked) {
+      filterRemove[index].classList.remove("hidden");
+    } else {
       filterRemove[index].classList.add("hidden");
       hideElement();
-    });
+    }
   };
 
   const hideElement = () => {
@@ -28,19 +27,28 @@ filterCheckbox.forEach((item, index) => {
     }
   };
 
+  // Initial state check
   if (item.checked) toggleChecked();
+
+  // Event listener for changes in the checkbox
   item.addEventListener("change", () => {
     toggleChecked();
-    hideElement();
+  });
+
+  // Event listener for the remove filter button
+  filterRemove[index].addEventListener("click", () => {
+    item.checked = false;
+    toggleChecked();
   });
 });
 
 closeFilters?.addEventListener("click", () => {
-  filterCheckbox.forEach((fc) => {
+  filterCheckbox.forEach((fc, index) => {
     fc.checked = false;
+    filterRemove[index].classList.add("hidden");
     fc.parentElement?.classList.add("hidden");
-    closeFilters.classList.add("hidden");
   });
+  closeFilters.classList.add("hidden");
 });
 
 const menus = document.querySelector(".filters-menu") as HTMLElement;

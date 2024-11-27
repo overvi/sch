@@ -1,7 +1,10 @@
 //@ts-ignore
 
+import { handleNestedCheckboxes } from "./slider";
+
 const elms = document.querySelectorAll(".splide-school-image")!;
-const elmPagination = document.querySelectorAll(".school-pagination-checkbox");
+const elmPagination = document.querySelectorAll(".school-pagination-checkbox")!;
+
 
 for (var i = 0; i < elms.length; i++) {
   //@ts-ignore
@@ -12,16 +15,11 @@ for (var i = 0; i < elms.length; i++) {
     fixedHeight: "max-content",
   }).mount();
 
-  const checkbox = elmPagination[i].querySelectorAll(
+  const checkboxes = elmPagination[i].querySelectorAll(
     ".p-checkbox"
   ) as NodeListOf<HTMLInputElement>;
 
-  checkbox.forEach((item, index) => {
-    item.addEventListener("change", () => {
-      elm.go(index);
-      checkbox.forEach((c) => {
-        if (c !== item) c.checked = false;
-      });
-    });
-  });
+
+
+  handleNestedCheckboxes(checkboxes , elm)
 }

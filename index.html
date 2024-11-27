@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,13 +19,18 @@
     <script src="/dist/darkMode.js"></script>
   </head>
   <body>
-  <aside class="fixed intro-wrapper overflow-hidden inset-0 grid place-items-center h-screen  bg-white z-[99999999999999999999] dark:bg-black">
-    <p class="text-3xl intro-text flex items-center gap-3">
-      <span class="size-[10px] dark:bg-white bg-black rounded-full inline-block"></span>
-    </p>
-  </aside>
-    <div
+    <aside
+      class="fixed intro-wrapper overflow-hidden inset-0 grid place-items-center h-screen bg-white z-[99999999999999999999] dark:bg-black"
+    >
+      <p class="text-3xl intro-text flex items-center gap-3">
+        <span
+          class="size-[10px] dark:bg-white bg-black rounded-full inline-block"
+        ></span>
+      </p>
+    </aside>
+    <button
       id="scroll-top"
+      aria-label="Scroll To Top"
       class="fixed z-[9999] dark:border bottom-4 cursor-pointer right-6 bg-black p-3 rounded-full text-center flex justify-center items-center"
     >
       <svg
@@ -47,7 +52,7 @@
         <path d="M12 21V4" />
         <path stroke-linecap="round" d="M12 3v1" />
       </svg>
-    </div>
+    </button>
     <div
       class="fixed menu -translate-x-full z-[999999] inset-0 dark:bg-black bg-white p-7"
     >
@@ -378,55 +383,56 @@
         </h1>
         <div
           style="font-size: clamp(1.1rem, 2vw + 0.5rem, 2rem)"
-          class=" mt-8 flex md:block h-[540px] rounded-[2rem] overflow-hidden bg-center md:h-[633px] banner w-auto -z-[1] relative bg-no-repeat"
-        > 
+          class="mt-8 flex md:block h-[540px] rounded-[2rem] overflow-hidden bg-center md:h-[633px] banner w-auto -z-[1] relative bg-no-repeat"
+        >
           <div
-            class="absolute  dark:text-black px-4 h-fit mb-9 text-white max-w-[63rem] flex right-0 left-0 items-center justify-between bottom-0 m-auto"
+            class="absolute dark:text-black px-4 h-fit mb-9 text-white max-w-[63rem] flex right-0 left-0 items-center justify-between bottom-0 m-auto"
           >
             <p>Click To</p>
             <p>Jackob School</p>
           </div>
-        
+
           <div
-            class="banner-image  bg-center bg-[url(/src/assets/images/m2.webp)] md:bg-[url(/src/assets/images/one.webp)] flex items-center w-full h-full rounded-[2rem] m-auto absolute top-0 bottom-0 outer-banner"
+            class="banner-image bg-center bg-[url(/src/assets/images/m2.webp)] md:bg-[url(/src/assets/images/one.webp)] flex items-center w-full h-full rounded-[2rem] m-auto absolute top-0 bottom-0 outer-banner"
           >
-          <div class="p-4 md:p-12  space-y-10">
-            <p>Some Small Text 1</p>
-            <h2            style="font-size: clamp(2.1rem, 4vw + 0.5rem, 3.565rem)"
-            >Heading 1</h2>
-            <div
-            class="border  z-[1000] w-fit  overflow-hidden  rounded-3xl border-gray-400"
-          >
-            <button
-              style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
-              class="px-[4vw] nav-booking nav-booking-right py-1.5 text-[2rem]"
-            >
-              <p>Book a call</p>
-            </button>
-          </div>
-          </div>
+            <div class="p-4 md:p-12 space-y-10">
+              <p>Some Small Text 1</p>
+              <h2 style="font-size: clamp(2.1rem, 4vw + 0.5rem, 3.565rem)">
+                Heading 1
+              </h2>
+              <div
+                class="border z-[1000] w-fit overflow-hidden rounded-3xl border-gray-400"
+              >
+                <button
+                  style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
+                  class="px-[4vw] nav-booking nav-booking-right py-1.5 text-[2rem]"
+                >
+                  <p>Book a call</p>
+                </button>
+              </div>
+            </div>
           </div>
           <div
-            class="banner-image bg-center bg-[url(/src/assets/images/m1.webp)]  md:bg-[url(/src/assets/images/two.webp)] flex items-center w-full h-full rounded-[2rem] m-auto absolute top-0 bottom-0 inner-banner"
+            class="banner-image bg-center bg-[url(/src/assets/images/m1.webp)] md:bg-[url(/src/assets/images/two.webp)] flex items-center w-full h-full rounded-[2rem] m-auto absolute top-0 bottom-0 inner-banner"
           >
-          <div class="p-4 md:p-12  space-y-10">
-            <p>Some Small Text 2</p>
-            <h2            style="font-size: clamp(2.1rem, 4vw + 0.5rem, 3.565rem)"
-            >Heading 2</h2>
-            <div
-            class="border  w-fit  overflow-hidden  rounded-3xl border-gray-400"
-          >
-            <button
-              style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
-              class="px-[4vw] nav-booking nav-booking-right py-1.5 text-[2rem]"
-            >
-              <p>Book a call</p>
-            </button>
-          </div>
-          </div>
+            <div class="p-4 md:p-12 space-y-10">
+              <p>Some Small Text 2</p>
+              <h2 style="font-size: clamp(2.1rem, 4vw + 0.5rem, 3.565rem)">
+                Heading 2
+              </h2>
+              <div
+                class="border w-fit overflow-hidden rounded-3xl border-gray-400"
+              >
+                <button
+                  style="font-size: clamp(1.5rem, 2vw + 0.5rem, 2rem)"
+                  class="px-[4vw] nav-booking nav-booking-right py-1.5 text-[2rem]"
+                >
+                  <p>Book a call</p>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-       
       </div>
     </header>
 
@@ -1725,116 +1731,701 @@
           </div>
         </div>
       </section>
-      <section class="mt-16 max-w-container px-4 m-auto">
-        <div class="w-fit m-auto text-center">
-          <p class="text-[3.562rem]">What makes us different</p>
-        </div>
-        <ul
-          style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))"
-          class="grid xl:gap-0 gap-7 xl:[&:not(:last-child)]:*:border-r mt-16 border rounded-3xl *:p-3"
-        >
-          <li class="flex flex-col min-h-[440px] h-full justify-between">
-            <div class="flex items-center justify-between">
-              <div class="size-20 dark:bg-gray-300 bg-black rounded-full"></div>
-              <p class="text-[2.25rem]">01</p>
-            </div>
-            <div>
-              <p class="text-[1.75rem]">Service Title</p>
-              <p>
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet
-              </p>
-            </div>
-          </li>
-          <li class="flex flex-col min-h-[440px] h-full justify-between">
-            <div class="flex items-center justify-between">
-              <div class="size-20 dark:bg-gray-300 bg-black rounded-full"></div>
-              <p class="text-[2.25rem]">01</p>
-            </div>
-            <div>
-              <p class="text-[1.75rem]">Service Title</p>
-              <p>
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet
-              </p>
-            </div>
-          </li>
-          <li class="flex flex-col min-h-[440px] h-full justify-between">
-            <div class="flex items-center justify-between">
-              <div class="size-20 dark:bg-gray-300 bg-black rounded-full"></div>
-              <p class="text-[2.25rem]">01</p>
-            </div>
-            <div>
-              <p class="text-[1.75rem]">Service Title</p>
-              <p>
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet
-              </p>
-            </div>
-          </li>
-          <li class="flex flex-col min-h-[440px] h-full justify-between">
-            <div class="flex items-center justify-between">
-              <div class="size-20 dark:bg-gray-300 bg-black rounded-full"></div>
-              <p class="text-[2.25rem]">01</p>
-            </div>
-            <div>
-              <p class="text-[1.75rem]">Service Title</p>
-              <p>
-                Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet
-              </p>
-            </div>
-          </li>
-        </ul>
-        <div class="faq mt-14 max-w-container px-4 m-auto">
+      <section class="mt-16">
+        <div class="relative mb-5">
           <div
-            class="before:absolute before:bg-gray-300 before:m-auto before:top-0 before:bottom-0 flex before:h-[2px] before:w-full relative"
+            class="left-0 hidden md:block right-0 -z-[1] h-[1px] absolute top-0 bottom-0 m-auto bg-gray-300"
+          ></div>
+          <div
+            class="splide splide-title-secondary px-4 min-[840px]:!m-auto min-[840px]:!w-fit"
+            role="groups"
+            aria-label="Splide Basic HTML Example"
           >
-            <p class="text-[2.812rem] z-50 bg-white dark:bg-black">FAQ</p>
+            <div class="splide__track">
+              <ul
+                class="splide__list min-[840px]:!px-3 min-[840px]:!flex min-[840px]:gap-5 min-[840px]:justify-center bg-white dark:bg-black px-3 *:rounded-full *:font-medium *:text-gray-400 *:border *:border-[#C2C7CF] *:text-center"
+              >
+                <li class="splide__slide relative *:p-2 *:px-3 overflow-hidden">
+                  <input
+                    type="checkbox"
+                    class="peer filter-checkbox inset-0 opacity-0 absolute"
+                  />
+                  <label
+                    for=""
+                    class="peer-checked:bg-[#AAF2CB] justify-between flex items-center gap-5 peer-checked:text-black"
+                  >
+                    <p>Group Title</p>
+                    <button
+                      class="z-50 p-1 remove-filter-btn hidden transition-all duration-700 hover:bg-black group rounded-2xl"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 20 20"
+                        class="fill-black dark:fill-white group-hover:fill-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.4498 0.564847C19.3111 0.425792 19.1462 0.315471 18.9648 0.240198C18.7833 0.164926 18.5888 0.126181 18.3923 0.126181C18.1959 0.126181 18.0014 0.164926 17.8199 0.240198C17.6384 0.315471 17.4736 0.425792 17.3348 0.564847L9.99985 7.88485L2.66485 0.549847C2.52597 0.410974 2.36111 0.300814 2.17966 0.225657C1.99822 0.150499 1.80374 0.111816 1.60735 0.111816C1.41095 0.111816 1.21648 0.150499 1.03503 0.225657C0.853586 0.300814 0.68872 0.410974 0.549847 0.549847C0.410974 0.68872 0.300814 0.853586 0.225657 1.03503C0.150499 1.21648 0.111816 1.41095 0.111816 1.60735C0.111816 1.80374 0.150499 1.99822 0.225657 2.17966C0.300814 2.36111 0.410974 2.52597 0.549847 2.66485L7.88485 9.99985L0.549847 17.3348C0.410974 17.4737 0.300814 17.6386 0.225657 17.82C0.150499 18.0015 0.111816 18.1959 0.111816 18.3923C0.111816 18.5887 0.150499 18.7832 0.225657 18.9647C0.300814 19.1461 0.410974 19.311 0.549847 19.4498C0.68872 19.5887 0.853586 19.6989 1.03503 19.774C1.21648 19.8492 1.41095 19.8879 1.60735 19.8879C1.80374 19.8879 1.99822 19.8492 2.17966 19.774C2.36111 19.6989 2.52597 19.5887 2.66485 19.4498L9.99985 12.1148L17.3348 19.4498C17.4737 19.5887 17.6386 19.6989 17.82 19.774C18.0015 19.8492 18.1959 19.8879 18.3923 19.8879C18.5887 19.8879 18.7832 19.8492 18.9647 19.774C19.1461 19.6989 19.311 19.5887 19.4498 19.4498C19.5887 19.311 19.6989 19.1461 19.774 18.9647C19.8492 18.7832 19.8879 18.5887 19.8879 18.3923C19.8879 18.1959 19.8492 18.0015 19.774 17.82C19.6989 17.6386 19.5887 17.4737 19.4498 17.3348L12.1148 9.99985L19.4498 2.66485C20.0198 2.09485 20.0198 1.13485 19.4498 0.564847Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </label>
+                </li>
+                <li class="splide__slide relative *:p-2 *:px-3 overflow-hidden">
+                  <input
+                    type="checkbox"
+                    class="peer filter-checkbox inset-0 opacity-0 absolute"
+                  />
+                  <label
+                    for=""
+                    class="peer-checked:bg-[#AAF2CB] justify-between flex items-center gap-5 peer-checked:text-black"
+                  >
+                    <p>Group Title</p>
+                    <button
+                      class="z-50 p-1 remove-filter-btn hidden transition-all duration-700 hover:bg-black group rounded-2xl"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 20 20"
+                        class="fill-black dark:fill-white group-hover:fill-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.4498 0.564847C19.3111 0.425792 19.1462 0.315471 18.9648 0.240198C18.7833 0.164926 18.5888 0.126181 18.3923 0.126181C18.1959 0.126181 18.0014 0.164926 17.8199 0.240198C17.6384 0.315471 17.4736 0.425792 17.3348 0.564847L9.99985 7.88485L2.66485 0.549847C2.52597 0.410974 2.36111 0.300814 2.17966 0.225657C1.99822 0.150499 1.80374 0.111816 1.60735 0.111816C1.41095 0.111816 1.21648 0.150499 1.03503 0.225657C0.853586 0.300814 0.68872 0.410974 0.549847 0.549847C0.410974 0.68872 0.300814 0.853586 0.225657 1.03503C0.150499 1.21648 0.111816 1.41095 0.111816 1.60735C0.111816 1.80374 0.150499 1.99822 0.225657 2.17966C0.300814 2.36111 0.410974 2.52597 0.549847 2.66485L7.88485 9.99985L0.549847 17.3348C0.410974 17.4737 0.300814 17.6386 0.225657 17.82C0.150499 18.0015 0.111816 18.1959 0.111816 18.3923C0.111816 18.5887 0.150499 18.7832 0.225657 18.9647C0.300814 19.1461 0.410974 19.311 0.549847 19.4498C0.68872 19.5887 0.853586 19.6989 1.03503 19.774C1.21648 19.8492 1.41095 19.8879 1.60735 19.8879C1.80374 19.8879 1.99822 19.8492 2.17966 19.774C2.36111 19.6989 2.52597 19.5887 2.66485 19.4498L9.99985 12.1148L17.3348 19.4498C17.4737 19.5887 17.6386 19.6989 17.82 19.774C18.0015 19.8492 18.1959 19.8879 18.3923 19.8879C18.5887 19.8879 18.7832 19.8492 18.9647 19.774C19.1461 19.6989 19.311 19.5887 19.4498 19.4498C19.5887 19.311 19.6989 19.1461 19.774 18.9647C19.8492 18.7832 19.8879 18.5887 19.8879 18.3923C19.8879 18.1959 19.8492 18.0015 19.774 17.82C19.6989 17.6386 19.5887 17.4737 19.4498 17.3348L12.1148 9.99985L19.4498 2.66485C20.0198 2.09485 20.0198 1.13485 19.4498 0.564847Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </label>
+                </li>
+                <li class="splide__slide relative *:p-2 *:px-3 overflow-hidden">
+                  <input
+                    type="checkbox"
+                    class="peer filter-checkbox inset-0 opacity-0 absolute"
+                  />
+                  <label
+                    for=""
+                    class="peer-checked:bg-[#AAF2CB] justify-between flex items-center gap-5 peer-checked:text-black"
+                  >
+                    <p>Group Title</p>
+                    <button
+                      class="z-50 p-1 remove-filter-btn hidden transition-all duration-700 hover:bg-black group rounded-2xl"
+                    >
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 20 20"
+                        class="fill-black dark:fill-white group-hover:fill-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M19.4498 0.564847C19.3111 0.425792 19.1462 0.315471 18.9648 0.240198C18.7833 0.164926 18.5888 0.126181 18.3923 0.126181C18.1959 0.126181 18.0014 0.164926 17.8199 0.240198C17.6384 0.315471 17.4736 0.425792 17.3348 0.564847L9.99985 7.88485L2.66485 0.549847C2.52597 0.410974 2.36111 0.300814 2.17966 0.225657C1.99822 0.150499 1.80374 0.111816 1.60735 0.111816C1.41095 0.111816 1.21648 0.150499 1.03503 0.225657C0.853586 0.300814 0.68872 0.410974 0.549847 0.549847C0.410974 0.68872 0.300814 0.853586 0.225657 1.03503C0.150499 1.21648 0.111816 1.41095 0.111816 1.60735C0.111816 1.80374 0.150499 1.99822 0.225657 2.17966C0.300814 2.36111 0.410974 2.52597 0.549847 2.66485L7.88485 9.99985L0.549847 17.3348C0.410974 17.4737 0.300814 17.6386 0.225657 17.82C0.150499 18.0015 0.111816 18.1959 0.111816 18.3923C0.111816 18.5887 0.150499 18.7832 0.225657 18.9647C0.300814 19.1461 0.410974 19.311 0.549847 19.4498C0.68872 19.5887 0.853586 19.6989 1.03503 19.774C1.21648 19.8492 1.41095 19.8879 1.60735 19.8879C1.80374 19.8879 1.99822 19.8492 2.17966 19.774C2.36111 19.6989 2.52597 19.5887 2.66485 19.4498L9.99985 12.1148L17.3348 19.4498C17.4737 19.5887 17.6386 19.6989 17.82 19.774C18.0015 19.8492 18.1959 19.8879 18.3923 19.8879C18.5887 19.8879 18.7832 19.8492 18.9647 19.774C19.1461 19.6989 19.311 19.5887 19.4498 19.4498C19.5887 19.311 19.6989 19.1461 19.774 18.9647C19.8492 18.7832 19.8879 18.5887 19.8879 18.3923C19.8879 18.1959 19.8492 18.0015 19.774 17.82C19.6989 17.6386 19.5887 17.4737 19.4498 17.3348L12.1148 9.99985L19.4498 2.66485C20.0198 2.09485 20.0198 1.13485 19.4498 0.564847Z"
+                        ></path>
+                      </svg>
+                    </button>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="columns-1 md:columns-2 *:border-b gap-7">
-            <div class="faq-container bg-green-350 p-3">
-              <div
-                class="question flex items-center hover:mx-5 transition-all duration-700"
+        </div>
+        <div>
+          <div class="relative px-4">
+            <button
+              aria-label="Previous Schools"
+              class="absolute ss-left hidden lg:flex dark:border bottom-0 top-0 h-fit m-auto cursor-pointer bg-black p-3 rounded-full text-center justify-center items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                class="-rotate-90"
+                viewBox="0 0 24 24"
+                role="img"
+                aria-labelledby="arrowUpIconTitle"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                color="#fff"
               >
-                <p class="text-[1.75rem]">01</p>
-                <p class="ml-5 px-5">A Sentence Of Question</p>
+                <title id="arrowUpIconTitle">Arrow Up</title>
+                <path d="M18 9l-6-6-6 6" />
+                <path d="M12 21V4" />
+                <path stroke-linecap="round" d="M12 3v1" />
+              </svg>
+            </button>
+
+            <section
+              class="splide px-4 splide-schools-secondary mx-0 lg:mx-16"
+              aria-label="Splide Basic HTML Example"
+            >
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide ss-wrapper">
+                    <div
+                      class="splide splide-schools-data dark:bg-[#683C00] rounded-3xl bg-[#FFDCBD]"
+                      role="group"
+                      aria-label="Schools"
+                    >
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide slide-ss-item">
+                            <div
+                              class="flex-col mid-lg:flex-row flex justify-between gap-6 mt-5 p-3 mid-lg:p-6"
+                            >
+                              <div
+                                class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
+                              >
+                                <div>
+                                  <p class="text-[2rem] mb-5">School’ss name</p>
+                                  <p>
+                                    Borem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nunc vulputate libero et
+                                    velit interdum, ac aliquet Borem ipsum dolor
+                                    sit amet, consectetur adipiscing elit. Nunc
+                                    vulputate libero et velit interdum, ac
+                                    aliquetBorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Nunc vulputate
+                                    libero et velit interdum, ac aliquet
+                                  </p>
+                                </div>
+                                <div>
+                                  <div
+                                    class="flex items-center mt-8 gap-5 w-full justify-between"
+                                  >
+                                    <button
+                                      class="bg-black text-white text-nowrap rounded-full py-3 px-3 font-medium"
+                                    >
+                                      View School
+                                    </button>
+                                    <button
+                                      class="bg-[#32628D] block mid-lg:hidden text-white text-nowrap rounded-full p-3 px-5 font-medium"
+                                    >
+                                      Book a Call
+                                    </button>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="mt-9 overflow-hidden font-medium"
+                                    >
+                                      <ul
+                                        class="flex *:basis-full ss-school-pagination-checkbox relative text-[0.875rem] items-end"
+                                      >
+                                        <li
+                                          class="border-black rounded-l-xl relative overflow-hidden text-center group border border-r-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="bg-[#FBB974] p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                        <li
+                                          class="border-black overflow-hidden relative text-center group border rounded-r-xl border-l-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="p-3">
+                                  <div
+                                    class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]"
+                                  >
+                                    <div class="relative">
+                                      <button
+                                        class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                      >
+                                        <p>Book a Call</p>
+                                      </button>
+                                      <img
+                                        class="w-[500px]"
+                                        src="/src/assets/images/schools.webp"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide slide-ss-item">
+                            <div
+                              class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-3 mid-lg:p-6"
+                            >
+                              <div
+                                class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
+                              >
+                                <div>
+                                  <p class="text-[2rem] mb-5">School’ss name</p>
+                                  <p>
+                                    Borem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nunc vulputate libero et
+                                    velit interdum, ac aliquet Borem ipsum dolor
+                                    sit amet, consectetur adipiscing elit. Nunc
+                                    vulputate libero et velit interdum, ac
+                                    aliquetBorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Nunc vulputate
+                                    libero et velit interdum, ac aliquet
+                                  </p>
+                                </div>
+                                <div>
+                                  <div
+                                    class="flex items-center mt-8 gap-5 w-full justify-between"
+                                  >
+                                    <button
+                                      class="bg-black text-white text-nowrap rounded-full py-3 px-3 font-medium"
+                                    >
+                                      View School
+                                    </button>
+                                    <button
+                                      class="bg-[#32628D] block mid-lg:hidden text-white text-nowrap rounded-full p-3 px-5 font-medium"
+                                    >
+                                      Book a Call
+                                    </button>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="mt-9 overflow-hidden font-medium"
+                                    >
+                                      <ul
+                                        class="flex *:basis-full ss-school-pagination-checkbox relative text-[0.875rem] items-end"
+                                      >
+                                        <li
+                                          class="border-black rounded-l-xl relative overflow-hidden text-center group border border-r-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                        <li
+                                          class="border-black rounded-r-xl overflow-hidden relative text-center group border border-l-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="bg-[#FBB974] p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="splide__slide p-3">
+                                  <div
+                                    class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]"
+                                  >
+                                    <div class="relative">
+                                      <button
+                                        class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                      >
+                                        <p>Book a Call</p>
+                                      </button>
+                                      <img
+                                        class="w-[500px]"
+                                        src="/src/assets/images/schools.webp"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="splide__slide ss-wrapper">
+                    <div
+                      class="splide splide-schools-data dark:bg-[#683C00] rounded-3xl bg-[#FFDCBD]"
+                      role="group"
+                      aria-label="Schools"
+                    >
+                      <div class="splide__track">
+                        <ul class="splide__list">
+                          <li class="splide__slide slide-ss-item">
+                            <div
+                              class="flex-col mid-lg:flex-row flex justify-between gap-6 mt-5 p-3 mid-lg:p-6"
+                            >
+                              <div
+                                class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
+                              >
+                                <div>
+                                  <p class="text-[2rem] mb-5">School’ss name</p>
+                                  <p>
+                                    Borem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nunc vulputate libero et
+                                    velit interdum, ac aliquet Borem ipsum dolor
+                                    sit amet, consectetur adipiscing elit. Nunc
+                                    vulputate libero et velit interdum, ac
+                                    aliquetBorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Nunc vulputate
+                                    libero et velit interdum, ac aliquet
+                                  </p>
+                                </div>
+                                <div>
+                                  <div
+                                    class="flex items-center mt-8 gap-5 w-full justify-between"
+                                  >
+                                    <button
+                                      class="bg-black text-white text-nowrap rounded-full py-3 px-3 font-medium"
+                                    >
+                                      View School
+                                    </button>
+                                    <button
+                                      class="bg-[#32628D] block mid-lg:hidden text-white text-nowrap rounded-full p-3 px-5 font-medium"
+                                    >
+                                      Book a Call
+                                    </button>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="mt-9 overflow-hidden font-medium"
+                                    >
+                                      <ul
+                                        class="flex *:basis-full ss-school-pagination-checkbox relative text-[0.875rem] items-end"
+                                      >
+                                        <li
+                                          class="border-black rounded-l-xl relative overflow-hidden text-center group border border-r-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="bg-[#FBB974] p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                        <li
+                                          class="border-black overflow-hidden relative text-center group border rounded-r-xl border-l-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="p-3">
+                                  <div
+                                    class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]"
+                                  >
+                                    <div class="relative">
+                                      <button
+                                        class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                      >
+                                        <p>Book a Call</p>
+                                      </button>
+                                      <img
+                                        class="w-[500px]"
+                                        src="/src/assets/images/schools.webp"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="splide__slide slide-ss-item">
+                            <div
+                              class="bg-[#FFDCBD] flex-col mid-lg:flex-row dark:bg-[#683C00] flex justify-between gap-6 mt-5 rounded-3xl p-3 mid-lg:p-6"
+                            >
+                              <div
+                                class="flex order-1 mid-lg:-order-1 flex-col basis-[50%] justify-between p-1 mid-lg:p-5"
+                              >
+                                <div>
+                                  <p class="text-[2rem] mb-5">School’ss name</p>
+                                  <p>
+                                    Borem ipsum dolor sit amet, consectetur
+                                    adipiscing elit. Nunc vulputate libero et
+                                    velit interdum, ac aliquet Borem ipsum dolor
+                                    sit amet, consectetur adipiscing elit. Nunc
+                                    vulputate libero et velit interdum, ac
+                                    aliquetBorem ipsum dolor sit amet,
+                                    consectetur adipiscing elit. Nunc vulputate
+                                    libero et velit interdum, ac aliquet
+                                  </p>
+                                </div>
+                                <div>
+                                  <div
+                                    class="flex items-center mt-8 gap-5 w-full justify-between"
+                                  >
+                                    <button
+                                      class="bg-black text-white text-nowrap rounded-full py-3 px-3 font-medium"
+                                    >
+                                      View School
+                                    </button>
+                                    <button
+                                      class="bg-[#32628D] block mid-lg:hidden text-white text-nowrap rounded-full p-3 px-5 font-medium"
+                                    >
+                                      Book a Call
+                                    </button>
+                                  </div>
+                                  <div>
+                                    <div
+                                      class="mt-9 overflow-hidden font-medium"
+                                    >
+                                      <ul
+                                        class="flex *:basis-full ss-school-pagination-checkbox relative text-[0.875rem] items-end"
+                                      >
+                                        <li
+                                          class="border-black rounded-l-xl relative overflow-hidden text-center group border border-r-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                        <li
+                                          class="border-black rounded-r-xl overflow-hidden relative text-center group border border-l-0"
+                                        >
+                                          <input
+                                            class="absolute ss-p-checkbox peer opacity-0 inset-0"
+                                            type="checkbox"
+                                          />
+                                          <div class="bg-[#FBB974] p-2.5">
+                                            <p>Groups Label</p>
+                                            <p class="hidden group-hover:block">
+                                              4 Courses
+                                            </p>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <div class="splide__slide p-3">
+                                  <div
+                                    class="w-fit m-auto mid-lg:m-0 ml-auto basis-[50%]"
+                                  >
+                                    <div class="relative">
+                                      <button
+                                        class="bg-[#FBB974] overflow-hidden nav-booking absolute -bottom-2 -right-2 hidden mid-lg:block text-[1.8rem] rounded-full p-2 px-3"
+                                      >
+                                        <p>Book a Call</p>
+                                      </button>
+                                      <img
+                                        class="w-[500px]"
+                                        src="/src/assets/images/schools.webp"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="answercont">
-                <p class="answer py-6">Answer</p>
+            </section>
+            <button
+              aria-label="Next Schoos"
+              class="absolute ss-right hidden lg:block dark:border mr-3 right-0 bottom-0 top-0 h-fit m-auto cursor-pointer bg-black p-3 rounded-full text-center flex justify-center items-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                class="rotate-90"
+                viewBox="0 0 24 24"
+                role="img"
+                aria-labelledby="arrowUpIconTitle"
+                stroke="#fff"
+                stroke-width="1"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+                color="#fff"
+              >
+                <title id="arrowUpIconTitle">Arrow Up</title>
+                <path d="M18 9l-6-6-6 6" />
+                <path d="M12 21V4" />
+                <path stroke-linecap="round" d="M12 3v1" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="max-w-container px-4 m-auto">
+          <div class="w-fit m-auto text-center">
+            <p class="text-[3.562rem]">What makes us different</p>
+          </div>
+          <ul
+            style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))"
+            class="grid xl:gap-0 gap-7 xl:[&:not(:last-child)]:*:border-r mt-16 border rounded-3xl *:p-3"
+          >
+            <li class="flex flex-col min-h-[440px] h-full justify-between">
+              <div class="flex items-center justify-between">
+                <div
+                  class="size-20 dark:bg-gray-300 bg-black rounded-full"
+                ></div>
+                <p class="text-[2.25rem]">01</p>
               </div>
+              <div>
+                <p class="text-[1.75rem]">Service Title</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet
+                </p>
+              </div>
+            </li>
+            <li class="flex flex-col min-h-[440px] h-full justify-between">
+              <div class="flex items-center justify-between">
+                <div
+                  class="size-20 dark:bg-gray-300 bg-black rounded-full"
+                ></div>
+                <p class="text-[2.25rem]">01</p>
+              </div>
+              <div>
+                <p class="text-[1.75rem]">Service Title</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet
+                </p>
+              </div>
+            </li>
+            <li class="flex flex-col min-h-[440px] h-full justify-between">
+              <div class="flex items-center justify-between">
+                <div
+                  class="size-20 dark:bg-gray-300 bg-black rounded-full"
+                ></div>
+                <p class="text-[2.25rem]">01</p>
+              </div>
+              <div>
+                <p class="text-[1.75rem]">Service Title</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet
+                </p>
+              </div>
+            </li>
+            <li class="flex flex-col min-h-[440px] h-full justify-between">
+              <div class="flex items-center justify-between">
+                <div
+                  class="size-20 dark:bg-gray-300 bg-black rounded-full"
+                ></div>
+                <p class="text-[2.25rem]">01</p>
+              </div>
+              <div>
+                <p class="text-[1.75rem]">Service Title</p>
+                <p>
+                  Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  vulputate libero et velit interdum, ac aliquet
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="faq mt-14 max-w-container px-4 m-auto">
+            <div
+              class="before:absolute before:bg-gray-300 before:m-auto before:top-0 before:bottom-0 flex before:h-[2px] before:w-full relative"
+            >
+              <p class="text-[2.812rem] z-50 bg-white dark:bg-black">FAQ</p>
             </div>
-            <div class="faq-container bg-green-350 p-3">
-              <div
-                class="question hover:mx-5 transition-all duration-700 flex items-center"
-              >
-                <p class="text-[1.75rem]">01</p>
-                <p class="ml-5 px-5">A Sentence Of Question</p>
+            <div class="columns-1 md:columns-2 *:border-b gap-7">
+              <div class="faq-container bg-green-350 p-3">
+                <div
+                  class="question flex items-center hover:mx-5 transition-all duration-700"
+                >
+                  <p class="text-[1.75rem]">01</p>
+                  <p class="ml-5 px-5">A Sentence Of Question</p>
+                </div>
+                <div class="answercont">
+                  <p class="answer py-6">Answer</p>
+                </div>
               </div>
-              <div class="answercont">
-                <p class="answer py-6">Answer</p>
+              <div class="faq-container bg-green-350 p-3">
+                <div
+                  class="question hover:mx-5 transition-all duration-700 flex items-center"
+                >
+                  <p class="text-[1.75rem]">01</p>
+                  <p class="ml-5 px-5">A Sentence Of Question</p>
+                </div>
+                <div class="answercont">
+                  <p class="answer py-6">Answer</p>
+                </div>
               </div>
-            </div>
-            <div class="faq-container bg-green-350 p-3">
-              <div
-                class="question hover:mx-5 transition-all duration-700 flex items-center"
-              >
-                <p class="text-[1.75rem]">01</p>
-                <p class="ml-5 px-5">A Sentence Of Question</p>
+              <div class="faq-container bg-green-350 p-3">
+                <div
+                  class="question hover:mx-5 transition-all duration-700 flex items-center"
+                >
+                  <p class="text-[1.75rem]">01</p>
+                  <p class="ml-5 px-5">A Sentence Of Question</p>
+                </div>
+                <div class="answercont">
+                  <p class="answer py-6">Answer</p>
+                </div>
               </div>
-              <div class="answercont">
-                <p class="answer py-6">Answer</p>
-              </div>
-            </div>
-            <div class="faq-container bg-green-350 p-3">
-              <div
-                class="question hover:mx-5 transition-all duration-700 flex items-center"
-              >
-                <p class="text-[1.75rem]">01</p>
-                <p class="ml-5 px-5">A Sentence Of Question</p>
-              </div>
-              <div class="answercont">
-                <p class="answer py-6">Answer</p>
+              <div class="faq-container bg-green-350 p-3">
+                <div
+                  class="question hover:mx-5 transition-all duration-700 flex items-center"
+                >
+                  <p class="text-[1.75rem]">01</p>
+                  <p class="ml-5 px-5">A Sentence Of Question</p>
+                </div>
+                <div class="answercont">
+                  <p class="answer py-6">Answer</p>
+                </div>
               </div>
             </div>
           </div>
