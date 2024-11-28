@@ -29,7 +29,7 @@ const splide_secondary = new Splide(".splide-schools-secondary", {
   mediaQuery: "min",
   fixedWidth: "70%",
   width: "100%",
-  gap: "1.5rem",
+  gap: "4.5rem",
   arrows: false,
 
   breakpoints: {
@@ -55,6 +55,7 @@ ssContainers.forEach((ss, index) => {
     gap: "1.5rem",
     arrows: false,
     autoPlay: true,
+    speed: "1",
   }).mount();
 
   const slideItems = ss.querySelectorAll(
