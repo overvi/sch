@@ -29,7 +29,7 @@ const splide_secondary = new Splide(".splide-schools-secondary", {
   mediaQuery: "min",
   fixedWidth: "70%",
   width: "100%",
-  gap: "4.5rem",
+  gap: "1.5rem",
   arrows: false,
 
   breakpoints: {
@@ -97,7 +97,7 @@ new Splide(".splide-title-secondary", {
   mediaQuery: "min",
   perPage: 2,
   perMove: 1,
-  gap: "1rem",
+  fixedWidth: "100%",
   arrows: false,
 
   breakpoints: {
