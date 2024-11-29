@@ -55,6 +55,7 @@ ssContainers.forEach((ss, index) => {
     gap: "1.5rem",
     arrows: false,
     autoPlay: true,
+    drag: false,
     speed: "1",
   }).mount();
 
